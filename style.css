@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--main-color);
+    background: radial-gradient(circle, rgba(64,63,68,1) 35%, rgba(30,27,50,1) 100%);
+}
+
+:root{
+    --main-color: #ffffff;
+    font-family: 'Oswald', sans-serif;    
+}
+
+#links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+a{
+    color: var(--main-color);
+    text-decoration: none;
+    transition: all .3s;
+    font-size: 25px;
+}
+
+a:hover{
+    scale: 1.05;
+}
