@@ -2,6 +2,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%; 
     flex-direction: column;
     color: var(--main-color);
     background: radial-gradient(circle, rgba(64,63,68,1) 35%, rgba(30,27,50,1) 100%);
