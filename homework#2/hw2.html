@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>homework#2 (lists + imgs)</title>
 </head>
 <body>
     <h1>Теги для создания списков</h1>
     <h2>Виды списков:</h2>
-    <ul>
+    <ol reversed type="a">
         <li>маркированный список<a href="#unordered">(unordered list)</a>;</li>
-        <li>нумерованный список<a href="#numered">(numered list);</a>;</li>
+        <li>нумерованный список<a href="#numered">(numered list)</a>;</li>
         <li>список определений<a href="#definition">(definition list)</a>.</li>
-    </ul>
+    </ol>
 
     <span>Маркированный и нумерованный списки представляют собой контейнеры, внутри которых располагаются элементы списка.</span>
 
@@ -24,20 +25,20 @@
     </ul>
 
     <h3 id="numered">Нумерованный список</h3>
-    <ol>
+    <ul id="numeredList">
         <li>Нумерованный список создается с помощью с помощью тега &ltol&gt&lt/ol&gt (ordered list). </li>
         <li>Нумерация может быть числовая или алфавитная.</li>
         <li>Элементы маркированного списка (по аналогии с маркированными списками) создаются с помощью тега &ltli&gt&lt/li&gt (list item).</li>
-    </ol>
+    </ul>
 
     <span>С помощью CSS-свойств можно изменить внешний вид маркера списка, добавить изображение для маркера и изменить его местоположение.</span>
 
     <img src="./images/img.png" alt="itog">
 
     <h3 id="definition">Список определений</h3>
-        <ul>
+        <ul id="definitionList">
             <li>Cписок определений создается с помощью с помощью тега &ltdl&gt&lt/dl&gt (definition list)</li>
-            <li>Для добавления термина применяется тег &ltdt&gt&lt/dt&gt, а для вставки определения — <dd></dd>.</li>
+            <li>Для добавления термина применяется тег &ltdt&gt&lt/dt&gt, а для вставки определения — &ltdd&gt&lt/dd&gt.</li>
         </ul>
 
         <span>Списки можно помещать друг в друга. Например, внутрь маркированного списка можно вложить нумерованный список, и наоборот.</span>

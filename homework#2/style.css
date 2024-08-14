@@ -1,0 +1,21 @@
+ul{
+    list-style-position: inside;
+    list-style-type:square;
+}
+
+ul > li:nth-child(2){
+    list-style-type: none;
+}
+
+ul#numeredList{
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+ul#numeredList > li:nth-child(2){
+    list-style-type: none;
+}
+
+#definitionList{
+    list-style-image: url('./images/icon.png');
+}
