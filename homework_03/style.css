@@ -12,3 +12,13 @@ thead > tr > td{
 caption{
     text-align: center;
 }
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input, select, button, textarea{
+    width: fit-content;
+}
