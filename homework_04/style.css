@@ -1,0 +1,19 @@
+h1, h2{
+    text-align: center;
+}
+
+main > ul > li{
+    list-style-type: circle;
+}
+
+footer > ul > li:nth-child(1){
+    list-style-image: url('./image/location-pin.png');
+}
+
+footer > ul > li:nth-child(2){
+    list-style-image: url('./image/phone-call.png');
+}
+
+footer > ul > li:nth-child(3){
+    list-style-image: url('./image/email.png');
+}
