@@ -34,3 +34,6 @@ label[for="comment"]{
     width: fit-content;
 }
 
+th{
+    text-align: left;
+}
