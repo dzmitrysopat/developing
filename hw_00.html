@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzmitry Sopat hw_01</title>
+</head>
+<body>
+    <h1>HTML (HyperText Markup Language)</h1>    
+    <br>
+    <hr>
+    <p>
+        <abbr title="hyper text markup language">HTML</abbr> - это язык гипертекстовой разметки.
+        <br><br>
+        HTML-документ состоит из тегов. 
+        <mark>Тег - специальный управляющий код, записываемый в угловых скобках.</mark> 
+        Любой контент на веб-странице, должен быть обернут в тег, который описывает этот контент.
+        <br><br>
+        <ins>Теги бывают одиночные и парные.</ins>
+        <br><br>
+        <em>Одиночные теги</em> не имеют закрывающего тега, потому что они не работают с содержимым, а выполняют какую-то функцию сами по себе.
+        <br><br>
+        <em>Парные теги</em> состоят из двух частей — открывающего и закрывающего тегов. У закрывающего тега обязательно должен стоять слэш <del>(косая черта)</del> перед названием тега.
+    </p>
+    <hr>
+    <br>
+    <h2>Базовая разметка htlm-документа:</h2>
+    <pre>
+        <code>
+            &lt!DOCTYPE html&gt
+            &lthtml lang="en"&gt
+                &lthead&gt
+                    &ltmeta charset="UTF-8"&gt
+                    &lttitle>Document&lt/title&gt
+                &lt/head&gt
+                &ltbody&gt
+                    &ltspan&gtHello world&lt/span&gt
+                &lt/body&gt
+            &lt/html&gt
+        </code>
+    </pre>
+    <br>
+    <hr>
+    <span>Тег <strong>&lthtml&gt&lt/html&gt</strong> оборачивает весь документ. Внутри данного тега добавляется все содержание html-страницы.</span>
+    <p>
+        Тег <strong>&lthead&gt&lt/head&gt</strong> содержит все необходимые данные о html-документе. Здесь содержится вспомогательная, описательная и техническая информация о странице: заголовок, описание, ключевые слова, автора, кодировку, подключение стилей и шрифтов т.д. Данные внутри данного тега не отображается в окне браузера, однако содержат данные, которые указывают браузеру, как следует обрабатывать страницу.
+    </p>
+    <span>
+        Тег <strong> &ltbody&gt&lt/body&gt </strong> cодержит основную часть документа.
+    </span>
+</body>
+</html>
