@@ -135,6 +135,26 @@ a > i{
 main{
     grid-area: 2 / 2 / 5 / 6;
 }
+
+
+article.hw-link{
+    width: 450px;
+    height: 250px;
+    background: center no-repeat ;
+    background-image: url('https://eurobyte.ru/img/articles/chto-takoe-html/image1.jpeg');
+}
+
+h3.hw-id{
+    color: #fff;
+    background: #00aeff;
+    width: fit-content;
+    padding: 0px 5px;
+}
+
+p.description{
+    color: #8d8e8d;
+    font-size: 10px;
+}
 /* main */
 
 /* footer */
