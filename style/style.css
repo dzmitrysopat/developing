@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */
+
+*{
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    color: #383838;
+    padding: 0;
+    margin: 0;
+    /* outline: 2px solid lightgreen; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    /* display: flex; */
+    /* flex: 1; */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    /* max-width: 100%; */
+    max-width: 1400px;
+    overflow-x: hidden;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+header{
+    grid-area: 1 / 1 / 2 / 6;
+    /* margin: 15px 0; */
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0%;
+    top: 0;
+}
+
+a.logo__link{
+    gap: 10px;
+    display: flex;
+    font-size: 27px;
+    font-weight: 600;
+    align-items: center;
+    transition: all .4s;   
+}
+
+a.logo__link:hover{
+    opacity: 0.8;
+}
+
+img.logotype{
+    width: 45px;
+}
+
+nav{
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    gap: 30px;
+}
+
+nav > a{
+    transition: all .4s;
+	position: relative;
+    cursor: pointer;
+}
+
+nav > a:hover,
+nav > a.colored{
+    color: #f7941d;
+}
+
+nav > a:after,
+nav > a:active:after{
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 3px; /*задаём ширину линии*/
+	background-color: #f7941d; /*задаём цвет линии*/
+	content: "";
+	transition: width 0.2s ease-out; /*задаём время анимации*/
+}
+
+nav > a:hover:after,
+nav > a:focus:after,
+nav > a.active-link:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+nav a.active-link,
+nav a.active-link >i{
+    color: #f7941d;
+}
+
+/* asiede */
+aside{
+    grid-area: 2 / 1 / 6 / 2;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 500;
+    border-right: 2px solid #b4b4b4;
+}
+
+aside > a,
+.social > a > i{
+    transition: 0.4s;
+}
+
+aside > a:hover,
+.social > a:hover > i{
+    color: #f7941d;
+}
+
+.social{
+    display: flex;
+    gap: 15px;
+
+}
+
+a > i{
+    font-size: 25px;
+}
+/* asiede */
+
+/* main */
+main{
+    grid-area: 2 / 2 / 5 / 6;
+}
+/* main */
+
+/* footer */
+footer{
+    grid-area: 5 / 2 / 6 / 6;
+}
+
+
+footer > h5{
+    color: #8d8e8d;
+    font-weight: 100;
+}
+/* footer */
