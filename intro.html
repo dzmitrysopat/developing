@@ -36,6 +36,7 @@
         </section>
     </aside>
     <main>
+        <span id="datetime"></span>
         <h1 class="page-title">HTML</h1>
         <section class="hw-block">
             <article class="hw-link">
@@ -46,6 +47,26 @@
             </article>
         </section>
     </main>
-    <footer><h5 class="copyright">Copyright © 2024. All rights are reserved</h5></footer>
+    <footer><h5 class="copyright">Copyright © <span id="year"></span>. All rights are reserved</h5></footer>
+
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+        const date = new Date();
+    const options = {  weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'  };
+    const dayOfWeek = date.toLocaleString('ru-RU', options);
+
+document.querySelector('#datetime').textContent = dayOfWeek;
+
+const yearOption = { year: 'numeric'};
+const currentYear = date.toLocaleString('ru-RU', yearOption);
+
+document.querySelector('#year').textContent = currentYear;
+}
+        setInterval(updateDateTime, 1000);
+    </script>
 </body>
 </html>

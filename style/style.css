@@ -158,6 +158,13 @@ main{
     padding: 2%;
 }
 
+#datetime{
+    padding: 2px 5px;
+    background: #383838;
+    color: #fff;
+    font-weight: 600;
+}
+
 
 article.hw-link{
     width: 450px;
@@ -186,7 +193,8 @@ footer{
 }
 
 
-footer > h5{
+footer > h5,
+footer > h5 > span{
     color: #8d8e8d;
     font-weight: 100;
 }
