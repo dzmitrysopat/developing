@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <h1>Вставка изображений в HTML-документ
+    </h1>
+    <hr>
+    <h2>Греция</h2>
+    <p>
+        Греция находится в Южной Европе и занимает южную часть Балканского полуострова.
+        <br><br>
+        Территория страны делится на материковую часть, полуостров Пелопоннес и острова в Эгейском море (крупнейшие — Крит, Лесбос, Эвбея).        
+    </p>
+    <figure>
+        <img src="./images/img_peloponnese.png" alt="Вид на Остров">
+        <img src="./images/img_peloponnese2.png" alt="еще вид на остров">    
+        <figcaption>
+            Рельеф страны представляет собой чередование гористой местности и безлесых выровненных участков, живописных плодородных долин, мелких бухт, заливов, островных территорий, карстовых воронок и пещер в западной части Греции.
+            
+        </figcaption>
+    </figure>
+    <hr>
+    <h2>Создание изображения в качестве карты</h2>
+    <img src="./images/map_peloponnese.jpeg" alt="Карта островов" usemap="#map">
+    <map name="map">
+        <area shape="circle" coords="254, 399, 50" href="youtube.com" alt="">
+    </map>
+</body>
+</html>
