@@ -24,8 +24,9 @@ body{
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin: 0 auto;
-    /* max-width: 100%; */
-    max-width: 1400px;
+    padding: 0 50px;
+    max-width: 100%;
+    /* max-width: 1400px; */
     overflow-x: hidden;
     flex-direction: column;
     background-color: #fafafa;
@@ -165,15 +166,37 @@ main{
     font-weight: 600;
 }
 
+.topic-block{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 
 article.hw-link{
-    width: 450px;
-    height: 250px;
-    background: center no-repeat ;
-    background-image: url('https://eurobyte.ru/img/articles/chto-takoe-html/image1.jpeg');
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: center / contain no-repeat;
+    background-image: url('https://www.twistedbrackets.com/content/images/size/w1200/2022/12/html.png');
+    transition: all .6s;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+article.hw-link:hover{
+    opacity: 1;
+}
+
+
+div.block-description{
+    position: absolute;
+    top: 200px;
 }
 
 h3.hw-id{
+    position: absolute;
+    top: 15px;
     color: #fff;
     background: #00aeff;
     width: fit-content;
@@ -182,7 +205,7 @@ h3.hw-id{
 
 p.description{
     color: #8d8e8d;
-    font-size: 10px;
+    font-size: 15px;
 }
 /* main */
 
