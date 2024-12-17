@@ -25,8 +25,6 @@ document.querySelector('.theme').addEventListener('click', (event) => {
         document.querySelector('html').classList.remove('dark');
         document.querySelector('header nav i').classList.add("uil-moon");
         document.querySelector('header nav i').classList.remove("uil-sun");
-        figma.src = 'https://skillicons.dev/icons?i=figma';
-        git.src = 'https://skillicons.dev/icons?i=github'
         favicon.href = './img/logo.png';
         image.src = 'img/logo.png';
       }
