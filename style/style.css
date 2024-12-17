@@ -160,10 +160,15 @@ main{
 }
 
 #datetime{
-    padding: 2px 5px;
+    padding: 2px 15px;
+    border-radius: 5px;
     background: #383838;
     color: #fff;
     font-weight: 600;
+}
+
+.topic{
+    margin-top: 25px;
 }
 
 .topic-block{
@@ -194,7 +199,7 @@ div.block-description{
 
 h3.hw-id{
     position: absolute;
-    top: 10px;
+    top: 8px;
     color: #fff;
     background: #f7941d;
     width: fit-content;
@@ -234,101 +239,13 @@ footer > h5 > span{
     background: #75fe03;
 }
 
-.dark a,
+.dark #datetime{
+    background-color: #f7941d;
+}
+
 .dark i,
-.dark h1,
-.dark h2,
-.dark h3,
-.dark > h4,
-.dark div.card,
-.dark div.card > h4,
-.dark .parent-card,
-.dark div.skill-description > h4,
-.dark li,
-.dark button,
-.dark div.swiper-button-next,
-.dark div.swiper-button-prev,
-.dark input,
-.dark textarea,
-.dark a.btn:hover,
-.dark a.btn:hover > i,
-.dark button.btn:hover > i,
-.dark label{
-    color: #ddd;
-    background-color: inherit;
-}
-
-.dark .btn,
-.dark .btn > i,
-.dark button[type=submit],
-.dark span.swiper-pagination-bullet{
-    background-color: #ddd;
-    color: inherit;
-}
-
-.dark i:hover,
-.dark a.card:hover > h4,
-.dark a.card:hover > i,
-.dark div.swiper-button-next:hover,
-.dark div.swiper-button-prev:hover,
-.dark i.uil-arrow-up:hover,
-.dark nav > a:hover,
-.dark nav > a.colored,
-.dark nav a.active-link,
-.dark nav a.active-link >i,
-.dark a.mob-link:hover,
-.dark a.mob-link:hover > i,
-.dark a.white-btn:hover,
-.dark a.white-btn:hover > i,
-.dark button.white-btn:hover,
-.dark button.white-btn:hover > i,
-.dark button.white-btn.active,
-.dark button.white-btn.active > i,
-.dark a.card:hover > div.skill-item > i,
-.dark .skill-item:hover > i,
-.dark a.card:hover > div.skill-item > div.skill-description > h4{
-    color: #75fe03;
-}
-
-.dark span.swiper-pagination-bullet-active,
-.dark nav > a:after,
-.dark nav > a:active:after{
-    background-color: #75fe03;
-}
-
-.dark button.btn:hover{
-    background-color: inherit;
-    color: #ddd;
-    border: 2px solid #ddd;
-}
-
-.dark div.dot,
-.dark div.v-line{
-    background-color: #ddd;
-}
-
-.dark a.btn{
-    border: 2px solid #ddd;
-}
-
-.dark a.card:hover{
-    border: 2px solid #75fe03;
-}
-
-.dark a.card > h4{
-    color: #ddd;
-}
-
-.dark i.uil-arrow-up{
-    color: #383838;
-}
-
-.dark ::selection {
-    background: #8d8e8d; 
-    color: #fff;
-}
-
-.dark div.type > h3,
-.dark div.type > span{
-    color: #75fe03;
+.dark a,
+.dark box-icon,
+.dark h2{
+    color: #eeeeee;
 }
