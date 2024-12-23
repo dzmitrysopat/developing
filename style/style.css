@@ -112,6 +112,8 @@ nav > i{
 
 /* aside */
 aside{
+    /* width: fit-content;
+    padding-right: 150px; */
     grid-area: 2 / 1 / 6 / 2;
     gap: 15px;
     display: flex;
@@ -221,7 +223,7 @@ p.score{
 }
 
 progress::-webkit-progress-bar { 
-    background:  #8d8e8d; 
+    background:  #c2c2c2; 
     border-radius: 25px;
 } 
 progress::-webkit-progress-value {
@@ -288,6 +290,8 @@ footer > h5 > span{
 
 
 /* dark */
+
+
 /* dark scheme */
 .dark body,
 .dark #menu{
