@@ -1,16 +1,14 @@
-var attr = document.querySelector("section.topic-block > section.hw-block").getAttribute("onclick").length;
+const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
+// console.log(attrs);
 
-console.log(attr);
+// var kol = document.querySelectorAll("section.topic-block > section.hw-block").length;
+// console.log(kol);
 
-var kol = document.querySelectorAll("section.topic-block > section.hw-block").length;
-console.log(kol);
-
-// if (document.querySelector('hw-block').attributes) {
-//     console.log('have');
-//     document.querySelector('main article section .hw-block').classList.add("gray"); 
-// }
-// else{
-//     console.log('no');
-//     // document.querySelector('main article section .hw-block').classList.add("gray");    
-// }
-
+for (const attr of attrs){
+    if (attr.getAttribute('onclick').length == 0){
+        attr.classList.add("gray");
+    }
+    // else{
+    //     attr.classList.remove("gray")
+    // }
+}
