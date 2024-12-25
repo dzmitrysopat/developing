@@ -39,6 +39,7 @@ header{
     position: sticky;
     align-items: center;
     justify-content: space-between;
+    background-color: inherit;
     padding: 2% 0%;
     top: 0;
 }
@@ -246,6 +247,10 @@ article.hw-link{
     transition: all .6s;
     opacity: 0.7;
     cursor: pointer;
+}
+
+article.css{
+    background-image: url('https://itproger.com/img/courses/1476977488.jpg');
 }
 
 article.hw-link:hover{
