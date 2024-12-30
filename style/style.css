@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */
+/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */ /* #409ba5 */
 
 *{
     font-family: "Poppins", sans-serif;
@@ -113,8 +113,6 @@ nav > i{
 
 /* aside */
 aside{
-    padding: 15px;
-    background-color: #fff;
     width: fit-content;
     padding-right: 150px;
     grid-area: 2 / 1 / 6 / 2;
@@ -123,8 +121,7 @@ aside{
     flex-direction: column;
     font-size: 18px;
     font-weight: 500;
-    border-radius: 15px;
-    border: 2px solid #eeeeee;
+    border-right: 2px solid #eeeeee;
 }
 
 a.aside-link{
@@ -163,7 +160,9 @@ a > i{
 main{
     grid-area: 2 / 2 / 5 / 6;
     padding: 0% 2% 0 2%;
-    
+    display: flex;
+    flex-direction: column;
+    /* height: 50vh; */
 }
 
 #datetime{
@@ -172,6 +171,14 @@ main{
     background: #383838;
     color: #fff;
     font-weight: 600;
+    width: fit-content;
+}
+
+.calendar{
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #c2c2c2;
+    width: fit-content;
 }
 
 .topic{
@@ -179,10 +186,6 @@ main{
 }
 
 .topic-block{
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    border: 2px solid #eeeeee;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
@@ -196,19 +199,22 @@ main{
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px; */
-    padding: 10px;
     width: fit-content;
     margin-bottom: 25px;
-    background-color: #fff;
-    border-radius: 15px;
-    border: 2px solid #e7e7e7;
 }
 
 span.topic-name{
     grid-area: 1 / 1 / 3 / 2;
-    font-size: 45px;
+    font-size: 60px;
     font-weight: 800;
     margin-right: 25px;
+}
+
+.calendar{
+    margin-top: 25px !important;
+    margin-left: 0 !important;
+    justify-self: start;
+    max-width: 50vw;
 }
 
 .progress-info{
@@ -281,7 +287,6 @@ h3.hw-id{
     background: #f7941d;
     width: fit-content;
     padding: 0px 5px;
-    /* border-radius: 0 0 5px 0; */
 }
 
 p.description{

@@ -1,5 +1,5 @@
 const progressContainer = document.querySelector('#progress');
-const bodyContainer = document.querySelector('.score')
+const bodyContainer = document.querySelector('.score');
 const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
 const progressTemplate = 
 `<progress max="%max%" value="%value%" id="progress"></progress>`;
@@ -26,6 +26,7 @@ const questionNumber = scoreTemplate.replace('%score%', score);
 
 bodyContainer.innerHTML = questionNumber;
 
+document.querySelector('.calendar');
 
 
 

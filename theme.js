@@ -13,6 +13,7 @@ document.querySelector('.theme').addEventListener('click', (event) => {
   function addDarkClassToHTML() {
     const image = document.getElementById("logoImg");
     const favicon = document.getElementById("favicon");
+    const calendar = document.querySelector('.calendar');
     try {
       if (localStorage.getItem('theme') === 'dark') {
         document.querySelector('html').classList.add('dark');
@@ -20,6 +21,7 @@ document.querySelector('.theme').addEventListener('click', (event) => {
         document.querySelector('header nav i').classList.remove("uil-moon");
         image.src = './img/logo-light.png';
         favicon.href = './img/logo-light.png';
+        calendar.src = 'https://ghchart.rshah.org/409ba5/dzmitrysopat'
       }
       else {
         document.querySelector('html').classList.remove('dark');
@@ -27,6 +29,7 @@ document.querySelector('.theme').addEventListener('click', (event) => {
         document.querySelector('header nav i').classList.remove("uil-sun");
         favicon.href = './img/logo.png';
         image.src = 'img/logo.png';
+        calendar.src = 'https://ghchart.rshah.org/383838/dzmitrysopat'
       }
     } catch (err) { }
   }

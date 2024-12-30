@@ -8,6 +8,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <link rel="stylesheet"   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/> -->
+
     <title>Progress Dashboard</title>
 </head>
 <body>
@@ -43,6 +46,12 @@
 
     <main>
         <span id="datetime"></span>
+        <!-- <div class="calendar">
+            Loading the data just for you.
+        </div> -->
+        <a href="https://github.com/dzmitrysopat" target="_blank">
+            <img src="https://ghchart.rshah.org/383838/dzmitrysopat" alt="2016rshah's Github chart" class="calendar"/>
+        </a>
         <article class="topic">
             <!-- <h2 class="page-title">HTML</h2> -->
             <section class="progress-block">
@@ -96,8 +105,13 @@
 
       
     </main>
-    <!-- <footer><h5 class="copyright">Copyright © <span id="year"></span>. All rights are reserved</h5></footer> -->
+    <footer><h5 class="copyright">Copyright © <span id="year"></span>. All rights are reserved</h5></footer>
 
+    <!-- <script>
+        GitHubCalendar(".calendar", "dzmitrysopat");
+        // or enable responsive functionality
+        // GitHubCalendar(".calendar", "dzmitrysopat", { responsive: true });
+    </script> -->
     <script>
         // create a function to update the date and time
         function updateDateTime() {
