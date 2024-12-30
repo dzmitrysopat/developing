@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */ /* #409ba5 */
+/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */ /* #409ba5 */ /* #007226 */
 
 *{
     font-family: "Poppins", sans-serif;
@@ -174,11 +174,16 @@ main{
     width: fit-content;
 }
 
+.calendar-link{
+    width: fit-content;
+}
+
 .calendar{
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 8px;
     border: 2px solid #c2c2c2;
-    width: fit-content;
+    width: 800px;
+    /* width: fit-content; */
 }
 
 .topic{

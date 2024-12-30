@@ -21,7 +21,7 @@ document.querySelector('.theme').addEventListener('click', (event) => {
         document.querySelector('header nav i').classList.remove("uil-moon");
         image.src = './img/logo-light.png';
         favicon.href = './img/logo-light.png';
-        calendar.src = 'https://ghchart.rshah.org/409ba5/dzmitrysopat'
+        calendar.src = 'https://ghchart.rshah.org/007226/dzmitrysopat'
       }
       else {
         document.querySelector('html').classList.remove('dark');
@@ -29,7 +29,7 @@ document.querySelector('.theme').addEventListener('click', (event) => {
         document.querySelector('header nav i').classList.remove("uil-sun");
         favicon.href = './img/logo.png';
         image.src = 'img/logo.png';
-        calendar.src = 'https://ghchart.rshah.org/383838/dzmitrysopat'
+        calendar.src = 'https://ghchart.rshah.org/007226/dzmitrysopat'
       }
     } catch (err) { }
   }
