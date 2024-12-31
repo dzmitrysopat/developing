@@ -8,9 +8,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-    <link rel="stylesheet"   href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/> -->
-
     <title>Progress Dashboard</title>
 </head>
 <body>
@@ -49,9 +46,20 @@
         <!-- <div class="calendar">
             Loading the data just for you.
         </div> -->
-        <a href="https://github.com/dzmitrysopat" target="_blank" class="calendar-link">
+        <!-- <a href="https://github.com/dzmitrysopat" target="_blank" class="calendar-link">
             <img src="https://ghchart.rshah.org/383838/dzmitrysopat" alt="2016rshah's Github chart" class="calendar"/>
-        </a>
+        </a> -->
+        <div>
+            <!-- Include the library. -->
+            <script src="./script/github-calendar.js"></script>
+            
+            <link rel="stylesheet" href="./style/github-calendar.css"/>
+            <!-- Prepare a container for your calendar. -->
+            <div class="calendar">Loading Stuff...</div>
+            
+            <script>GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});</script>
+            </div>
+
         <article class="topic">
             <!-- <h2 class="page-title">HTML</h2> -->
             <section class="progress-block">
@@ -131,7 +139,7 @@ document.querySelector('#year').textContent = currentYear;
 }
         setInterval(updateDateTime, 1000);
     </script>
-    <script src="./theme.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script/theme.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
