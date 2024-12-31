@@ -69,6 +69,7 @@
       font-size: 8pt;
       left: -5pt;
       color: #383838;
+      padding: .125em .5em .125em 0;;
   }
   
  .dark td.ContributionCalendar-label span[aria-hidden='true'] {
@@ -244,7 +245,6 @@
   .day-tooltip {
       white-space: nowrap;
       position: absolute;
-      z-index: 99999;
       padding: 8px;
       font-size: 12px;
       color: #fff;
