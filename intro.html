@@ -43,22 +43,14 @@
 
     <main>
         <span id="datetime"></span>
-        <!-- <div class="calendar">
-            Loading the data just for you.
-        </div> -->
-        <!-- <a href="https://github.com/dzmitrysopat" target="_blank" class="calendar-link">
-            <img src="https://ghchart.rshah.org/383838/dzmitrysopat" alt="2016rshah's Github chart" class="calendar"/>
-        </a> -->
         <div>
             <!-- Include the library. -->
             <script src="./script/github-calendar.js"></script>
-            
             <link rel="stylesheet" href="./style/github-calendar.css"/>
             <!-- Prepare a container for your calendar. -->
             <div class="calendar">Loading Stuff...</div>
-            
             <script>GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});</script>
-            </div>
+        </div>
 
         <article class="topic">
             <!-- <h2 class="page-title">HTML</h2> -->
@@ -115,11 +107,6 @@
     </main>
     <footer><h5 class="copyright">Copyright © <span id="year"></span>. All rights are reserved</h5></footer>
 
-    <!-- <script>
-        GitHubCalendar(".calendar", "dzmitrysopat");
-        // or enable responsive functionality
-        // GitHubCalendar(".calendar", "dzmitrysopat", { responsive: true });
-    </script> -->
     <script>
         // create a function to update the date and time
         function updateDateTime() {

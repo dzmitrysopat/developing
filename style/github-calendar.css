@@ -7,12 +7,14 @@
   }
   
   .ContributionCalendar-day[data-level='0'] {
-      background-color: var(--color-calendar-graph-day-bg);
+      background-color: #ebedf0;
+      border: 1px solid #1b1f230f;
       border-radius: 3px;
   }
   
  .dark .ContributionCalendar-day[data-level='0'] {
     background-color: #555555;
+    border: 1px solid #1b1f230f;
     border-radius: 3px;
 }
 
@@ -36,7 +38,7 @@
       border-radius: 3px;
   }
   
-.dark   .ContributionCalendar-day[data-level='2'] {
+.dark .ContributionCalendar-day[data-level='2'] {
     background-color: #45a045;
     border-radius: 3px;
 }
@@ -87,7 +89,7 @@
   
   .calendar {
       width: 100%;
-      max-width: 760px;
+      max-width: 800px;
       background-color: inherit;
       border: 2px solid #eeeeee;
       color: #383838;
@@ -95,7 +97,7 @@
       min-height: 120px;
       text-align: center;
       margin: 0 auto;
-      /* padding: 15px; */
+      padding: 15px;
   }
 
   @media screen and (max-width: 800px) {
