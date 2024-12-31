@@ -242,7 +242,7 @@ p.score{
     /* grid-area: 1 / 2 / 2 / 3; */
 }
 
-#progress{
+progress{
     grid-area: 2 / 2 / 3 / 3;
     width: 300px;
     height: 8px;
