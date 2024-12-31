@@ -166,6 +166,10 @@ main{
     /* height: 50vh; */
 }
 
+div[onclick]{
+    cursor: pointer;
+}
+
 #datetime{
     padding: 2px 15px;
     border-radius: 5px;
@@ -342,4 +346,8 @@ footer > h5 > span{
 .dark span.topic-name,
 .dark p.score{
     color: #eeeeee;
+}
+
+.none{
+    display: none;
 }

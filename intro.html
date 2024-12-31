@@ -15,9 +15,9 @@
         <a href="./intro.html" class="logo__link"><img src="./img/logo.png" alt="logotype" id="logoImg" class="logotype">Progress</a>
         <span id="datetime"></span>
         <nav id="nav" class="nav">
-            <a href="#" class="nav__link">HTML</a>
+            <a href="#htmlBlock" class="nav__link" onclick="html()">HTML</a>
             <a href="#" class="nav__link">GIT</a>
-            <a href="#" class="nav__link">CSS</a>
+            <a href="#cssBlock" class="nav__link" onclick="css()">CSS</a>
             <a href="#" class="nav__link">JavaScript</a>
             <!-- <i class='bx bx-search'></i> -->
             <i class="uil uil-moon theme"></i>
@@ -44,7 +44,7 @@
 
     <main>
         
-        <div>
+        <div onclick="window.open('https://github.com/dzmitrysopat', '_blank')">
             <!-- Include the library. -->
             <script src="./script/github-calendar.js"></script>
             <link rel="stylesheet" href="./style/github-calendar.css"/>
@@ -55,7 +55,7 @@
 
         <article class="topic">
             <!-- <h2 class="page-title">HTML</h2> -->
-            <section class="progress-block">
+            <section class="progress-block" id="htmlProgress">
                 <span class="topic-name">HTML</span>
                 <article class="progress-info">
                     <p class="score">%score</p>
@@ -63,7 +63,15 @@
                 </article>
             </section>
 
-            <section class="topic-block" id="html-block">
+            <section class="progress-block none" id="cssProgress">
+                <span class="topic-name">HTML</span>
+                <article class="progress-info">
+                    <p class="score">%score</p>
+                    <progress max="%max%" value="%value%" id="progress"></progress>    
+                </article>
+            </section>
+
+            <section class="topic-block" id="htmlBlock">
                 <section class="hw-block" onclick="window.open('./pages/homeworks/HTML/hw_00.html'), '_blank'">
                     <article class="hw-link">
                         <h3 class="hw-id">HTML</h3>
@@ -102,6 +110,56 @@
                     </article>
                 </section>
             </section>
+
+            <section class="topic-block none" id="cssBlock">
+                <section class="hw-block" onclick="">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Базовая разметка</h2>
+                            <p class="description">Базовая разметка. Текстовые теги.</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block"  onclick="">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Списки. Изображения</h2>
+                            <p class="description">Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block" onclick="">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Таблицы и формы</h2>
+                            <p class="description">Тэги для работы с таблицами. Форматирование таблиц. Формы. Поля форм.</p>
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block" onclick="">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Семантические теги. Аудио и видео</h2>
+                            <p class="description">Семантические теги. Аудио и видео</p>
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block" onclick="">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Семантические теги. Аудио и видео</h2>
+                            <p class="description">Семантические теги. Аудио и видео</p>
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            
         </article>
 
       
