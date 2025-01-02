@@ -284,7 +284,7 @@ article.hw-link{
 }
 
 .article-css{
-    background-image: url('https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png');
+    background-image: url('https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png') !important;
 }
 
 .css{

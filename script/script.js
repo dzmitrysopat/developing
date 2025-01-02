@@ -43,15 +43,20 @@ function css(){
 }
 
 
-const hwId = document.querySelectorAll(".hw-id");
-if (hwId.textContent = 'CSS'){
+var content = [];
+document.querySelectorAll("h3").forEach(function(item){
+  content.push(item.textContent); 
+  console.log(item);
+  if (item.textContent == 'CSS'){
     document.querySelector("h3").classList.add("css");
-    document.querySelector(".hw-link").classList.add("article-css");
-}
-console.log(hwId.textContent);
+    document.querySelector("article .hw-link").classList.add("article-css");
+  }
+});
 
 
+console.log(content.join());
 
-// if (hwId.value = 'css'){
-//     hwId.classList.add("css");
+// if (hwIds == 'CSS'){
+//     document.querySelector("h3").classList.add("css");
+//     document.querySelector(".hw-link").classList.add("article-css");
 // }
