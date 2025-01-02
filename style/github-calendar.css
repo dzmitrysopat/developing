@@ -89,15 +89,15 @@
   }
   
   .calendar {
-      width: 100%;
-      max-width: 800px;
+      width: 65%;
+      /* max-width: 800px; */
       background-color: inherit;
       border: 2px solid #eeeeee;
       color: #383838;
       border-radius: 10px;
       min-height: 120px;
       text-align: center;
-      margin: 0 auto;
+      /* margin: 0 auto; */
       padding: 15px;
   }
 

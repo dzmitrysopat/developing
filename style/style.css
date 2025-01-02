@@ -32,9 +32,12 @@ body{
     background-color: #fafafa;
 }
 
+div#header{
+    grid-area: 1 / 1 / 2 / 6;
+}
+
 header{
     z-index: 2;
-    grid-area: 1 / 1 / 2 / 6;
     /* margin: 15px 0; */
     display: flex;
     position: sticky;
@@ -113,10 +116,14 @@ nav > i{
 }
 
 /* aside */
+div#aside{
+    grid-area: 2 / 1 / 6 / 2;
+}
+
 aside{
     width: fit-content;
     padding-right: 150px;
-    grid-area: 2 / 1 / 6 / 2;
+    
     gap: 15px;
     display: flex;
     flex-direction: column;
@@ -265,7 +272,6 @@ progress::-webkit-progress-value {
 
 /* progress block */
 
-
 article.hw-link{
     position: relative;
     width: 300px;
@@ -277,8 +283,12 @@ article.hw-link{
     cursor: pointer;
 }
 
-article.css{
-    background-image: url('https://itproger.com/img/courses/1476977488.jpg');
+.article-css{
+    background-image: url('https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png');
+}
+
+.css{
+    background: blue !important;
 }
 
 article.hw-link:hover{
@@ -306,15 +316,18 @@ p.description{
 /* main */
 
 /* footer */
+div#footer{
+    grid-area: 5 / 2 / 6 / 6;
+}
+
 footer{
     padding: 2%;
-    grid-area: 5 / 2 / 6 / 6;
     align-self: flex-end;
 }
 
 
-footer > h5,
-footer > h5 > span{
+#footer > h5,
+#footer > h5 > span{
     color: #8d8e8d;
     font-weight: 100;
 }

@@ -1,8 +1,8 @@
-const progressContainer = document.querySelector('#progress');
+const progressContainer = document.getElementById("progress");
 const bodyContainer = document.querySelector('.score');
 const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
 const progressTemplate = 
-`<progress max="%max%" value="%value%" id="progress"></progress>`;
+`<progress max="%max%" value="%value%""></progress>`;
 let value = 0;
 
 progressContainer.max = attrs.length;
@@ -42,3 +42,16 @@ function css(){
     document.getElementById("htmlProgress").classList.add("none")
 }
 
+
+const hwId = document.querySelectorAll(".hw-id");
+if (hwId.textContent = 'CSS'){
+    document.querySelector("h3").classList.add("css");
+    document.querySelector(".hw-link").classList.add("article-css");
+}
+console.log(hwId.textContent);
+
+
+
+// if (hwId.value = 'css'){
+//     hwId.classList.add("css");
+// }
