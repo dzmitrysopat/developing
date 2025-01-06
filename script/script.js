@@ -2,7 +2,7 @@ const progressContainer = document.getElementById("progress");
 const bodyContainer = document.querySelector('.score');
 const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
 const progressTemplate = 
-`<progress max="%max%" value="%value%""></progress>`;
+`<progress max="%max%" value="%value%"></progress>`;
 let value = 0;
 
 progressContainer.max = attrs.length;
