@@ -28,35 +28,39 @@ bodyContainer.innerHTML = questionNumber;
 
 // document.querySelector('.calendar');
 
-function html(){
-    document.getElementById("htmlBlock").classList.remove("none");
-    document.getElementById("cssBlock").classList.add("none");
-    document.getElementById("cssProgress").classList.add("none");
-    document.getElementById("htmlProgress").classList.remove("none")
-}
+// function html(){
+//     document.getElementById("htmlBlock").classList.remove("none");
+//     document.getElementById("cssBlock").classList.add("none");
+//     document.getElementById("cssProgress").classList.add("none");
+//     document.getElementById("htmlProgress").classList.remove("none")
+// }
 
-function css(){
-    document.getElementById("htmlBlock").classList.add("none");
-    document.getElementById("cssBlock").classList.remove("none");
-    document.getElementById("cssProgress").classList.remove("none");
-    document.getElementById("htmlProgress").classList.add("none")
-}
+// function css(){
+//     document.getElementById("htmlBlock").classList.add("none");
+//     document.getElementById("cssBlock").classList.remove("none");
+//     document.getElementById("cssProgress").classList.remove("none");
+//     document.getElementById("htmlProgress").classList.add("none")
+// }
+
+
 
 
 var content = [];
 document.querySelectorAll("h3").forEach(function(item){
-  content.push(item.textContent); 
-  console.log(item);
-  if (item.textContent == 'CSS'){
+  content.push(item.textContent);
+  for (const item of content){
+    console.log(item);
+  if (item == "CSS"){
+    console.log(true);
     document.querySelector("h3").classList.add("css");
-    document.querySelector("article .hw-link").classList.add("article-css");
-  }
+    document.querySelector(".hw-link").classList.add("article-css");
+  }}
 });
 
+const hwIds = document.querySelector("h3");
+console.log(hwIds.textContent);
 
-console.log(content.join());
-
-// if (hwIds == 'CSS'){
+// if (hwIds == "CSS"){
 //     document.querySelector("h3").classList.add("css");
 //     document.querySelector(".hw-link").classList.add("article-css");
 // }

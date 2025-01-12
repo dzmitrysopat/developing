@@ -23,12 +23,12 @@ body{
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 0 50px;
     max-width: 100%;
     /* max-width: 1400px; */
-    overflow-x: hidden;
-    flex-direction: column;
+    /* overflow-x: hidden; */
+    /* flex-direction: column; */
     background-color: #fafafa;
 }
 
@@ -122,14 +122,17 @@ div#aside{
 
 aside{
     width: fit-content;
-    padding-right: 150px;
-    
+    /* padding-right: 150px; */
     gap: 15px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
     font-weight: 500;
-    border-right: 2px solid #eeeeee;
+    background-color: #fff;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 10px 150px 10px 10px;
+    /* border-right: 2px solid #eeeeee; */
 }
 
 a.aside-link{
@@ -170,6 +173,7 @@ main{
     padding: 0% 2% 0 2%;
     display: flex;
     flex-direction: column;
+    gap: 25px;
     /* height: 50vh; */
 }
 
@@ -193,8 +197,10 @@ div[onclick]{
 .calendar{
     padding: 15px;
     border-radius: 8px;
-    border: 2px solid #c2c2c2;
+    border: 2px solid #eee;
     width: 800px;
+    background-color: #fff;
+    margin-bottom: 20px;
     /* width: fit-content; */
 }
 
@@ -206,6 +212,10 @@ div[onclick]{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #eee;
 }
 
 /* progress block */
@@ -218,6 +228,10 @@ div[onclick]{
     grid-row-gap: 0px; */
     width: fit-content;
     margin-bottom: 25px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #fff;
 }
 
 span.topic-name{
@@ -251,7 +265,7 @@ p.score{
 
 progress{
     grid-area: 2 / 2 / 3 / 3;
-    width: 300px;
+    width: 400px;
     height: 8px;
     border-radius: 50px;
     /* justify-content: space-between; */
