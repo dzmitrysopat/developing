@@ -28,30 +28,12 @@ bodyContainer.innerHTML = questionNumber;
 
 // document.querySelector('.calendar');
 
-// function html(){
-//     document.getElementById("htmlBlock").classList.remove("none");
-//     document.getElementById("cssBlock").classList.add("none");
-//     document.getElementById("cssProgress").classList.add("none");
-//     document.getElementById("htmlProgress").classList.remove("none")
-// }
-
-// function css(){
-//     document.getElementById("htmlBlock").classList.add("none");
-//     document.getElementById("cssBlock").classList.remove("none");
-//     document.getElementById("cssProgress").classList.remove("none");
-//     document.getElementById("htmlProgress").classList.add("none")
-// }
-
-
-
-
 var content = [];
 document.querySelectorAll("h3").forEach(function(item){
   content.push(item.textContent);
   for (const item of content){
     // console.log(item);
   if (item == "CSS"){
-    // console.log(true);
     document.querySelectorAll("h3").forEach(item => item.classList.add("css"))
     document.querySelectorAll(".hw-link").forEach(item => item.classList.add("article-css"));
   }}
