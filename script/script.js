@@ -49,18 +49,12 @@ var content = [];
 document.querySelectorAll("h3").forEach(function(item){
   content.push(item.textContent);
   for (const item of content){
-    console.log(item);
+    // console.log(item);
   if (item == "CSS"){
-    console.log(true);
-    document.querySelector("h3").classList.add("css");
-    document.querySelector(".hw-link").classList.add("article-css");
+    // console.log(true);
+    document.querySelectorAll("h3").forEach(item => item.classList.add("css"))
+    document.querySelectorAll(".hw-link").forEach(item => item.classList.add("article-css"));
   }}
+  console.log(item);
+  
 });
-
-const hwIds = document.querySelector("h3");
-console.log(hwIds.textContent);
-
-// if (hwIds == "CSS"){
-//     document.querySelector("h3").classList.add("css");
-//     document.querySelector(".hw-link").classList.add("article-css");
-// }
