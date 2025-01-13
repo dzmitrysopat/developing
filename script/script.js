@@ -38,5 +38,5 @@ document.querySelectorAll("h3").forEach(function(item){
     document.querySelectorAll(".hw-link").forEach(item => item.classList.add("article-css"));
   }}
   // console.log(item);
-  
 });
+
