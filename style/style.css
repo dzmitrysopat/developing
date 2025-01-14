@@ -16,24 +16,17 @@ html {
 }
 
 body{
-    /* display: flex; */
-    /* flex: 1; */
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    /* margin: 0 auto; */
+    flex: 1;
+    display: flex;
+    /* gap: 35px; */
+    flex-direction: column;
     padding: 0 50px;
     max-width: 100%;
     /* max-width: 1400px; */
     /* overflow-x: hidden; */
     /* flex-direction: column; */
-    background-color: #fafafa;
-}
-
-div#header{
-    grid-area: 1 / 1 / 2 / 6;
+    /* background-color: #fafafa; */
+    background-color: #F5F6F9;
 }
 
 header{
@@ -44,7 +37,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background-color: inherit;
-    padding: 2% 0%;
+    padding: 1% 0%;
     top: 0;
 }
 
@@ -105,7 +98,7 @@ nav > a.active-link:after {
 nav a.active-link,
 nav a.active-link >i,
 i:hover{
-    color: #f7941d;
+    color: #4750F2;
 }
 
 nav > i{
@@ -121,25 +114,36 @@ div#aside{
 }
 
 aside{
+    /* background-color: #F5F6F9; */
     width: fit-content;
-    /* padding-right: 150px; */
-    gap: 15px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    font-weight: 500;
-    background-color: #fff;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    padding: 10px 150px 10px 10px;
+    /* padding: 10px 150px 10px 10px; */
     /* border-right: 2px solid #eeeeee; */
 }
 
 a.aside-link{
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: center;
     font-size: 18px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 1s;
+}
+
+a.aside-link:hover{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #EBECF9;
+    width: 250px;
+    color: #4750F2;
+}
+
+aside > a:hover > i{
+    color: #4750F2;
 }
 
 aside > a,
@@ -149,11 +153,11 @@ aside > a > i,
     font-size: 30px;
 }
 
-aside > a:hover,
+/* aside > a:hover,
 aside > a:hover > i,
 .social > a:hover > i{
     color: #f7941d;
-}
+} */
 
 .social{
     display: flex;
@@ -165,16 +169,24 @@ aside > a:hover > i,
 a > i{
     font-size: 25px;
 }
-/* asiede */
+/* aside */
+
+/* progressBar */
+div#progressBar{
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* progressBar */
 
 /* main */
 main{
-    grid-area: 2 / 2 / 5 / 6;
-    padding: 0% 2% 0 2%;
+    padding: 0% 2% 0 0%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 25px;
+    /* background-color: #fff; */
     /* height: 50vh; */
+    border-radius: 15px;
 }
 
 div[onclick]{
@@ -184,7 +196,7 @@ div[onclick]{
 #datetime{
     padding: 2px 15px;
     border-radius: 5px;
-    background: #383838;
+    background: #4750F2;
     color: #fff;
     font-weight: 600;
     width: fit-content;
@@ -204,18 +216,19 @@ div[onclick]{
     /* width: fit-content; */
 }
 
-/* .topic{
-    margin-top: 25px;
-} */
+.topic{
+    background-color: #fff;
+    border-radius: 15px;
+}
 
 .topic-block{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 15px;
-    border-radius: 8px;
-    border: 2px solid #eee;
+    border-radius: 15px;
+    /* border: 2px solid #eee; */
 }
 
 /* progress block */
@@ -288,14 +301,20 @@ progress::-webkit-progress-value {
 /* progress block */
 
 article.hw-link{
-    position: relative;
+    /* position: relative; */
     width: 300px;
-    height: 200px;
+    height: 250px;
     background: center / contain no-repeat;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwXMKsG4_wlmlsOLkL7juxmJiw86IF8u7pw&s');
     transition: all .6s;
     opacity: 0.7;
     cursor: pointer;
+}
+
+section.hw-block{
+    /* position: relative; */
+    border-radius: 15px;
+    border: 1px solid #E4E2E4;
 }
 
 .article-css{
@@ -311,17 +330,23 @@ article.hw-link:hover{
 }
 
 div.block-description{
-    position: absolute;
-    top: 200px;
+    /* position: absolute; */
+    /* top: 200px; */
 }
 
 h3.hw-id{
-    position: absolute;
-    top: 8px;
-    color: #fff;
-    background: #f7941d;
+    /* position: absolute; */
+    /* top: 8px; */
+    color: #8F8DAB;
+    /* background: #f7941d; */
     width: fit-content;
     padding: 0px 5px;
+    display: flex;
+    align-items: center;
+}
+
+h3 > i{
+    color: #8F8DAB;
 }
 
 p.description{
