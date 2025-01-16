@@ -1,10 +1,3 @@
-//  Forrest Tindall 2024
-// Buy me a Coffee https://venmo.com/u/ForrestTindall
-
-
-
-
-
 "use strict";
 var _typeof2 =
   "function" == typeof Symbol && "symbol" == typeof Symbol.iterator

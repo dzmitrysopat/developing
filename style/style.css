@@ -179,6 +179,46 @@ div#progressBar{
 
 .aside-progress{
     padding: 15px;
+    display: flex;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+}
+
+.lil-links{
+    display: flex;
+    gap: 10px;
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+}
+
+.progress-link{
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.progress-link > i[class = "bx bxl-youtube"]{
+    color: red;
+    font-size: 45px;
+}
+
+.progress-link > i[class = "bx bx-plus-medical"]{
+    color: #0084ff;
+    font-size: 45px;
+}
+
+.progress-link-description > span{
+    font-weight: 500;
+}
+
+.progress-link-description > p{
+    font-size: 12px;
+    color: #c2c2c2;
 }
 /* progressBar */
 
@@ -215,6 +255,7 @@ div[onclick]{
     border-radius: 8px;
     border: 1px solid #c2c2c2;
     width: 300px;
+    /* scale: 0.5; */
     background-color: #fff;
     margin-bottom: 20px;
     /* width: fit-content; */
