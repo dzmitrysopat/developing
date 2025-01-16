@@ -176,6 +176,10 @@ div#progressBar{
     background-color: #fff;
     border-radius: 15px;
 }
+
+.aside-progress{
+    padding: 15px;
+}
 /* progressBar */
 
 /* main */
@@ -209,8 +213,8 @@ div[onclick]{
 .calendar{
     padding: 15px;
     border-radius: 8px;
-    border: 2px solid #eee;
-    width: 800px;
+    border: 1px solid #c2c2c2;
+    width: 300px;
     background-color: #fff;
     margin-bottom: 20px;
     /* width: fit-content; */
@@ -279,7 +283,7 @@ p.score{
 
 progress{
     grid-area: 2 / 2 / 3 / 3;
-    width: 300px;
+    /* width: 300px; */
     height: 8px;
     border-radius: 50px;
     /* justify-content: space-between; */

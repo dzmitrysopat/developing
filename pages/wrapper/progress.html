@@ -10,9 +10,28 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
-    
+    <aside class="aside-progress">
+        <h3>Мой прогресс</h3>
+        <div onclick="window.open('https://github.com/dzmitrysopat', '_blank')">
+            <script src="./script/github-calendar.js"></script>
+            <link rel="stylesheet" href="./style/github-calendar.css"/>
+            <div class="calendar">Loading Stuff...</div>
+            <script>GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});</script>
+        </div>
+            <section class="progress-block" id="ProgressHtml">
+                <span class="topic-name">HTML</span>
+                <article class="progress-info">
+                    <p class="score">%score</p>
+                    <progress max="%max%" value="%value%" id="progress"></progress>    
+                </article>
+            </section>
+            <section class="progress-block" id="ProgressCss">
+                <span class="topic-name">CSS</span>
+                <article class="progress-info">
+                    <p class="score">%score</p>
+                    <progress max="%max%" value="%value%" id="progress"></progress>    
+                </article>
+            </section>
+    </aside>
 </body>
 </html>
-<aside>
-    <h3>Мой прогресс</h3>
-</aside>
