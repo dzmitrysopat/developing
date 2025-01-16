@@ -180,7 +180,7 @@ div#progressBar{
 .aside-progress{
     padding: 15px;
     display: flex;
-    gap: 10px;
+    /* gap: 10px; */
     /* flex-wrap: wrap; */
 }
 
@@ -253,7 +253,7 @@ div[onclick]{
 .calendar{
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid #c2c2c2;
+    border: 2px solid #eee;
     width: 300px;
     /* scale: 0.5; */
     background-color: #fff;
@@ -301,8 +301,8 @@ span.topic-name{
 }
 
 .calendar{
-    margin-top: 25px !important;
-    margin-left: 0 !important;
+    margin-top: 25px;
+    /* margin-left: 0 !important; */
     justify-self: start;
     max-width: 50vw;
 }
@@ -359,7 +359,7 @@ article.hw-link{
 section.hw-block{
     /* position: relative; */
     border-radius: 15px;
-    border: 1px solid #E4E2E4;
+    border: 2px solid #eee;
 }
 
 .article-css{
