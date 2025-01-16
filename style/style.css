@@ -346,25 +346,50 @@ progress::-webkit-progress-value {
 /* progress block */
 
 article.hw-link{
-    /* position: relative; */
-    width: 300px;
-    height: 250px;
-    background: center / contain no-repeat;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwXMKsG4_wlmlsOLkL7juxmJiw86IF8u7pw&s');
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+    /* width: 300px; */
+    /* height: 250px; */
+    /* background: center / contain no-repeat; */
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlwXMKsG4_wlmlsOLkL7juxmJiw86IF8u7pw&s'); */
     transition: all .6s;
     opacity: 0.7;
-    cursor: pointer;
+    
 }
 
+/* h3{
+    padding: 0;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+h3 >i{
+    padding: 0;
+    font-size: 25px;
+    color: #383838 !important;
+} */
+
 section.hw-block{
+    max-width: 300px;
     /* position: relative; */
     border-radius: 15px;
     border: 2px solid #eee;
+    cursor: pointer;
 }
 
-.article-css{
-    background-image: url('https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png') !important;
+img.hw-logo{
+    border-radius: 15px 15px 0 0;
+    width: 300px;
+    height: 165px;
 }
+
+/* .article-css{
+    background-image: url('https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png') !important;
+} */
 
 .css{
     background: blue !important;
@@ -380,18 +405,14 @@ article.hw-link:hover{
 } */
 
 h3.hw-id{
-    /* position: absolute; */
-    /* top: 8px; */
-    color: #8F8DAB;
-    /* background: #f7941d; */
+    color: #f7941d;
     width: fit-content;
-    padding: 0px 5px;
     display: flex;
     align-items: center;
 }
 
 h3 > i{
-    color: #8F8DAB;
+    color: #f7941d;
 }
 
 p.description{
