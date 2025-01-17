@@ -27,15 +27,17 @@ const questionNumber = scoreTemplate.replace('%score%', score);
 bodyContainer.innerHTML = questionNumber;
 
 // document.querySelector('.calendar');
-
+// console.log(document.querySelector(".hw-id i").attr("class"));
+    
 var content = [];
 document.querySelectorAll("h3").forEach(function(item){
   content.push(item.textContent);
   for (const item of content){
-    // console.log(item);
+    console.log(item);
   if (item == "CSS"){
-    document.querySelectorAll("h3").forEach(item => item.classList.add("css"))
-    document.querySelectorAll(".hw-link").forEach(item => item.classList.add("article-css"));
+    document.querySelectorAll("h3").forEach(item => item.classList.add("css"));
+    document.querySelectorAll("i").forEach(item => item.classList.remove("bxl-html5"));
+    document.querySelectorAll("i").forEach(item => item.classList.add("bxl-css3"));
   }}
   // console.log(item);
 });
