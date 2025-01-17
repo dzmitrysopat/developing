@@ -36,8 +36,9 @@ document.querySelectorAll("h3").forEach(function(item){
     console.log(item);
   if (item == "CSS"){
     document.querySelectorAll("h3").forEach(item => item.classList.add("css"));
-    document.querySelectorAll("i").forEach(item => item.classList.remove("bxl-html5"));
+    document.querySelectorAll("i").forEach(item => item.classList.add("css"));
     document.querySelectorAll("i").forEach(item => item.classList.add("bxl-css3"));
+    document.querySelectorAll("i").forEach(item => item.classList.remove("bxl-html5")); 
   }}
   // console.log(item);
 });
