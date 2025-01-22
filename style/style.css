@@ -224,7 +224,8 @@ div#progressBar{
 
 /* main */
 main{
-    padding: 0% 2% 0 0%;
+    /* padding: 0% 2% 0 0%; */
+    padding: 0;
     display: flex;
     flex-direction: row;
     gap: 25px;
@@ -420,12 +421,15 @@ h3.hw-id{
     border-radius: 8px;
     width: fit-content;
     display: flex;
+    gap: 5px;
     align-items: center;
     font-size: 15px;
 }
 
 h3 > i{
-    color: #f7941d;
+    color: #fff;
+    font-size: 20px;
+    display: none !important;
 }
 
 h2{
@@ -436,6 +440,14 @@ p.description{
     color: #8d8e8d;
     font-size: 13px;
 }
+/* 
+.hw-block:not(:nth-child(1)){
+    display: none;
+}
+
+.hw-block:nth-child(2){
+    display: block;
+} */
 /* main */
 
 /* footer */
