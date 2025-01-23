@@ -272,11 +272,9 @@ div[onclick]{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    justify-content: space-between;
-    /* background-color: #fff; */
+    /* justify-content: space-between; */
     padding: 15px;
     border-radius: 15px;
-    /* border: 2px solid #eee; */
 }
 
 /* progress block */
