@@ -256,7 +256,7 @@ div[onclick]{
     padding: 15px;
     border-radius: 8px;
     border: 2px solid #eee;
-    width: 300px;
+    /* width: 300px; */
     /* scale: 0.5; */
     background-color: #fff;
     margin-bottom: 20px;
