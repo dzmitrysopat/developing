@@ -20,9 +20,6 @@
             margin: 10px 0;
             padding-left: 20px;
         }
-        li {
-            margin-bottom: 5px;
-        }
         .section {
             margin-bottom: 20px;
             padding: 15px;
@@ -30,7 +27,49 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
+        li {
+            margin-bottom: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        li.completed {
+            background-color: #d4edda;
+        }
     </style>
+     <script>
+        // Функция для сохранения состояния чекбоксов
+        function saveState() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const state = Array.from(checkboxes).map(checkbox => checkbox.checked);
+            localStorage.setItem('checkboxState', JSON.stringify(state));
+        }
+
+        // Функция для загрузки состояния чекбоксов
+        function loadState() {
+            const state = JSON.parse(localStorage.getItem('checkboxState'));
+            if (state) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach((checkbox, index) => {
+                    checkbox.checked = state[index];
+                    toggleComplete(checkbox);
+                });
+            }
+        }
+
+        // Функция для управления подсветкой пунктов
+        function toggleComplete(checkbox) {
+            const listItem = checkbox.parentElement;
+            if (checkbox.checked) {
+                listItem.classList.add('completed');
+            } else {
+                listItem.classList.remove('completed');
+            }
+            saveState();
+        }
+
+        window.onload = loadState;
+    </script>
 </head>
 <body>
     <h1>План подготовки на фронтенд-разработчика</h1>
@@ -41,23 +80,23 @@
         <ul>
             <li><strong>HTML</strong>
                 <ul>
-                    <li>Структура страницы, теги, семантический HTML.</li>
-                    <li>Формы и их элементы.</li>
-                    <li>Атрибуты, таблицы, списки.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Структура страницы, теги, семантический HTML.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Формы и их элементы.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Атрибуты, таблицы, списки.</li>
                 </ul>
             </li>
             <li><strong>CSS</strong>
                 <ul>
-                    <li>Селекторы, стили, каскадность.</li>
-                    <li>Flexbox, Grid Layout.</li>
-                    <li>Анимации, медиа-запросы (адаптивная верстка).</li>
-                    <li>Препроцессоры (например, SASS).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Селекторы, стили, каскадность.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Flexbox, Grid Layout.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Анимации, медиа-запросы (адаптивная верстка).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Препроцессоры (например, SASS).</li>
                 </ul>
             </li>
             <li><strong>Практика</strong>
                 <ul>
-                    <li>Верстка простых макетов.</li>
-                    <li>Учись работать с Figma для чтения макетов дизайнеров.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Верстка простых макетов.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Учись работать с Figma для чтения макетов дизайнеров.</li>
                 </ul>
             </li>
         </ul>
@@ -69,25 +108,25 @@
         <ul>
             <li><strong>Базовый синтаксис JavaScript</strong>
                 <ul>
-                    <li>Переменные, типы данных, операторы.</li>
-                    <li>Условия, циклы, функции.</li>
-                    <li>Массивы и объекты.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Переменные, типы данных, операторы.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Условия, циклы, функции.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Массивы и объекты.</li>
                 </ul>
             </li>
             <li><strong>Работа с DOM</strong>
                 <ul>
-                    <li>Поиск и изменение элементов.</li>
-                    <li>События (click, input и т.д.).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Поиск и изменение элементов.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">События (click, input и т.д.).</li>
                 </ul>
             </li>
             <li><strong>Основы работы с API</strong>
                 <ul>
-                    <li>Fetch API, работа с JSON.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Fetch API, работа с JSON.</li>
                 </ul>
             </li>
             <li><strong>Практика</strong>
                 <ul>
-                    <li>Создай интерактивные проекты (например, To-Do List, калькулятор).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Создай интерактивные проекты (например, To-Do List, калькулятор).</li>
                 </ul>
             </li>
         </ul>
@@ -99,20 +138,20 @@
         <ul>
             <li><strong>Модули и структуры данных</strong>
                 <ul>
-                    <li>ES6+ (деструктуризация, стрелочные функции, async/await).</li>
-                    <li>Classes, Promises.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">ES6+ (деструктуризация, стрелочные функции, async/await).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Classes, Promises.</li>
                 </ul>
             </li>
             <li><strong>Алгоритмы и структуры данных</strong>
                 <ul>
-                    <li>Основы алгоритмов (сортировки, поиск).</li>
-                    <li>Работа с деревьями и списками.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Основы алгоритмов (сортировки, поиск).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Работа с деревьями и списками.</li>
                 </ul>
             </li>
             <li><strong>Работа с браузером</strong>
                 <ul>
-                    <li>LocalStorage/SessionStorage.</li>
-                    <li>Cookies.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">LocalStorage/SessionStorage.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Cookies.</li>
                 </ul>
             </li>
         </ul>
@@ -124,17 +163,17 @@
         <ul>
             <li><strong>React</strong>
                 <ul>
-                    <li>Основы: компоненты, состояние (state), свойства (props).</li>
-                    <li>Хуки (useState, useEffect).</li>
-                    <li>Маршрутизация (React Router).</li>
-                    <li>Управление состоянием (Redux/Zustand/Context API).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Основы: компоненты, состояние (state), свойства (props).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Хуки (useState, useEffect).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Маршрутизация (React Router).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Управление состоянием (Redux/Zustand/Context API).</li>
                 </ul>
             </li>
             <li><strong>Другие технологии</strong>
                 <ul>
-                    <li>Типизация (TypeScript).</li>
-                    <li>Styled-components или Tailwind CSS.</li>
-                    <li>Основы Next.js или другого SSR-фреймворка.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Типизация (TypeScript).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Styled-components или Tailwind CSS.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Основы Next.js или другого SSR-фреймворка.</li>
                 </ul>
             </li>
         </ul>
@@ -146,19 +185,19 @@
         <ul>
             <li><strong>Система контроля версий</strong>
                 <ul>
-                    <li>Git: основные команды (commit, push, pull, merge).</li>
-                    <li>GitHub/GitLab: управление репозиториями.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Git: основные команды (commit, push, pull, merge).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">GitHub/GitLab: управление репозиториями.</li>
                 </ul>
             </li>
             <li><strong>Сборщики</strong>
                 <ul>
-                    <li>Webpack, Vite или Parcel.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Webpack, Vite или Parcel.</li>
                 </ul>
             </li>
             <li><strong>Линтинг и тестирование</strong>
                 <ul>
-                    <li>ESLint, Prettier.</li>
-                    <li>Jest или React Testing Library.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">ESLint, Prettier.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Jest или React Testing Library.</li>
                 </ul>
             </li>
         </ul>
@@ -170,16 +209,16 @@
         <ul>
             <li><strong>Создай портфолио из 3-5 проектов:</strong>
                 <ul>
-                    <li>Лэндинг с адаптивной версткой.</li>
-                    <li>SPA-приложение на React (например, блог, интернет-магазин).</li>
-                    <li>Работа с API (например, погода, фильмопоиск).</li>
-                    <li>Проект с использованием TypeScript.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Лэндинг с адаптивной версткой.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">SPA-приложение на React (например, блог, интернет-магазин).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Работа с API (например, погода, фильмопоиск).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Проект с использованием TypeScript.</li>
                 </ul>
             </li>
             <li><strong>Работа с реальными заказами</strong>
                 <ul>
-                    <li>Фриланс-платформы (Upwork, Freelance.ru).</li>
-                    <li>Участие в open-source проектах.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Фриланс-платформы (Upwork, Freelance.ru).</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Участие в open-source проектах.</li>
                 </ul>
             </li>
         </ul>
@@ -191,17 +230,17 @@
         <ul>
             <li><strong>Резюме и LinkedIn</strong>
                 <ul>
-                    <li>Оформление резюме и профиля.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Оформление резюме и профиля.</li>
                 </ul>
             </li>
             <li><strong>Алгоритмы для собеседований</strong>
                 <ul>
-                    <li>Решение задач на LeetCode, Codewars.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Решение задач на LeetCode, Codewars.</li>
                 </ul>
             </li>
             <li><strong>Подготовка к техническим интервью</strong>
                 <ul>
-                    <li>Практика обсуждения кода и решений.</li>
+                    <li><input type="checkbox" onchange="toggleComplete(this)">Практика обсуждения кода и решений.</li>
                 </ul>
             </li>
         </ul>
