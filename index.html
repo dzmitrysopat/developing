@@ -12,8 +12,8 @@
     <title>Progress Dashboard</title>
 </head>
 <body>
-    <div w3-include-html="./pages/wrapper/header.html" id="header"></div>
-    <main>       
+        <div w3-include-html="./pages/wrapper/header.html" id="header"></div>
+        <main>       
         <div w3-include-html="./pages/wrapper/aside.html" id="aside"></div>
 
         <article class="topic">
@@ -84,23 +84,37 @@
         // create a function to update the date and time
         function updateDateTime() {
         const date = new Date();
-    const options = {  weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'  };
-    const dayOfWeek = date.toLocaleString('ru-RU', options);
+            const options = {  weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'  };
+            const dayOfWeek = date.toLocaleString('ru-RU', options);
 
-document.querySelector('#datetime').textContent = dayOfWeek;
+        document.querySelector('#datetime').textContent = dayOfWeek;
 
-const yearOption = { year: 'numeric'};
-const currentYear = date.toLocaleString('ru-RU', yearOption);
+        const yearOption = { year: 'numeric'};
+        const currentYear = date.toLocaleString('ru-RU', yearOption);
 
-document.querySelector('#year').textContent = currentYear;
-}
-        setInterval(updateDateTime, 1000);
+        document.querySelector('#year').textContent = currentYear;
+        }
+                setInterval(updateDateTime, 1000);
     </script>
     <script src="./script/theme.js"></script>
     <script src="./script/script.js"></script>
-    <script>includeHTML();</script>
+    <script>
+        includeHTML(() => {
+            // Код для обновления данных
+            const progressContainer = document.getElementById("progress");
+            const bodyContainer = document.querySelector('.score');
+    
+            const htmlValue = localStorage.getItem('htmlValue');
+            const htmlProgress = localStorage.getItem('htmlProgress');
+            const questionNumber = localStorage.getItem('questionNumber');
+    
+            if (progressContainer) progressContainer.value = htmlValue || 0;
+            if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
+        });
+    </script>
+    
 </body>
 </html>

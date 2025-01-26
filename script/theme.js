@@ -1,5 +1,5 @@
 
-document.querySelector('.theme').addEventListener('click', (event) => {
+document.querySelector(".theme").addEventListener("click", (event) => {
     event.preventDefault();
     if (localStorage.getItem('theme') === 'dark') {
       localStorage.removeItem('theme');

@@ -6,12 +6,12 @@ function includeHTML(callback) {
         file = elmnt.getAttribute("w3-include-html");
         if (file) {
             xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
+            xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
                     if (this.status == 200) elmnt.innerHTML = this.responseText;
                     if (this.status == 404) elmnt.innerHTML = "Page not found.";
                     elmnt.removeAttribute("w3-include-html");
-                    includeHTML(callback);
+                    includeHTML(callback); // Рекурсия для остальных элементов
                 }
             };
             xhttp.open("GET", file, true);
@@ -19,7 +19,19 @@ function includeHTML(callback) {
             return;
         }
     }
-    if (callback) callback(); // Вызываем callback после загрузки
+    if (callback) callback(); // Вызов callback после завершения
 }
 
-// Вызываем функцию с callback
+// Пример вызова
+includeHTML(() => {
+    // Запускаем код, чтобы обновить данные в progress.html
+    const progressContainer = document.getElementById("progress");
+    const bodyContainer = document.querySelector('.score');
+
+    const htmlValue = localStorage.getItem('htmlValue');
+    const htmlProgress = localStorage.getItem('htmlProgress');
+    const questionNumber = localStorage.getItem('questionNumber');
+
+    if (progressContainer) progressContainer.value = htmlValue || 0;
+    if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
+});
