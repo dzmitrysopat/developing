@@ -25,13 +25,13 @@
                     <progress max="%max%" value="%value%" id="progress"></progress>    
                 </article>
             </section>
-            <section class="progress-block" id="ProgressCss">
+            <!-- <section class="progress-block" id="ProgressCss">
                 <span class="topic-name">CSS</span>
                 <article class="progress-info">
                     <p class="score">%score</p>
                     <progress max="%max%" value="%value%" id="progress"></progress>    
                 </article>
-            </section>
+            </section> -->
             <article class="lil-links">
                 <section class="progress-link" onclick="window.open('https://youtube.com/playlist?list=PLMJ4Yjs09WTyfoaW1N29obSWwjEK4wjvl&si=TsrwelH77n8SPniG'), '_blank'">
                     <i class='bx bxl-youtube'></i>
@@ -49,5 +49,26 @@
                 </section>    
             </article>
     </aside>
+    <script>
+        const progressContainer = document.getElementById("progress");
+        const bodyContainer = document.querySelector('.score');
+        const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
+        const progressTemplate = `<progress max="%max%" value="%value%"></progress>`;
+        let value = 0;
+        const htmlProgress = localStorage.getItem('htmlProgress');
+        console.log(htmlProgress);
+        
+        const htmlValue = localStorage.getItem('htmlValue')
+        progressContainer.value = htmlValue; 
+
+        const questionNumber = localStorage.getItem('questionNumber');
+        const scoreTemplate = `<p class="score">%score%</p>`;
+
+let score = `${value}/${attrs.length}`;
+const htmlNumber = scoreTemplate.replace('%score%', score);
+
+bodyContainer.innerHTML = questionNumber;
+
+    </script>
 </body>
 </html>

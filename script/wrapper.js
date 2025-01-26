@@ -23,11 +23,3 @@ function includeHTML(callback) {
 }
 
 // Вызываем функцию с callback
-includeHTML(function() {
-    // Инициализируем GitHubCalendar после загрузки HTML
-    GitHubCalendar(".calendar", "dzmitrysopat", {
-        responsive: true,
-        tooltips: false,
-        global_stats: false
-    });
-});

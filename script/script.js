@@ -6,6 +6,7 @@ const progressTemplate =
 let value = 0;
 
 progressContainer.max = attrs.length;
+localStorage.setItem('htmlProgress', progressContainer.max);
 
 for (const attr of attrs){
     if (attr.getAttribute('onclick').length == 0){
@@ -15,6 +16,7 @@ for (const attr of attrs){
         value = value + 1;
         // console.log(value);
         progressContainer.value = value;
+        localStorage.setItem('htmlValue', value);
     }    
 }
 
@@ -25,6 +27,10 @@ let score = `${value}/${attrs.length}`;
 const questionNumber = scoreTemplate.replace('%score%', score);
 
 bodyContainer.innerHTML = questionNumber;
+console.log(questionNumber);
+
+localStorage.setItem('htmlNumber', questionNumber);
+// window.location.href = '../pages/wrapper/progress.html';
 
 // document.querySelector('.calendar');
 // console.log(document.querySelector(".hw-id i").attr("class"));
