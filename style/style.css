@@ -266,6 +266,7 @@ div[onclick]{
 .topic{
     background-color: #fff;
     border-radius: 15px;
+    flex: 1;
 }
 
 .topic-block{
