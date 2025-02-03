@@ -1,0 +1,133 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.recipe{
+    margin: 0 auto;
+    position: relative;
+    padding: 40px;
+    max-width: 50vw;
+    border: 3px solid gray;
+    border-left: dashed gray;
+    border-bottom: dashed gray;
+    margin-bottom: 150px;
+}
+
+img{
+    position: absolute;
+    top: -100px;
+    right: -125px;
+    max-width: 300px;
+    height: 200px;
+    border: 5px solid gray;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+h3{
+    margin: 15px auto;
+}
+
+ul, ol{
+    margin-left: 50px;
+}
+
+ol{
+    margin-bottom: 50px;
+}
+
+.description::first-letter{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.postscriptum{
+    text-align: center;
+    font-style: italic;
+    text-decoration: overline;
+    font-weight: 500;
+}
+
+.apple{
+    background-color: #00c3ff59;
+    border-color: #005d92;
+}
+
+.apple > img{
+    border-color: #005d92;
+}
+
+.apple > .description::first-letter,
+.apple > h2,
+.apple > h3,
+.apple > ul > li:nth-child(even),
+.apple > ol > li:nth-child(even){
+    color: #005d92;
+}
+
+.apple > ul > li:nth-child(even),
+.apple > ol > li:nth-child(even){
+    text-decoration: underline dotted;
+}
+
+/* tiramisu */
+.tiramisu{
+    background-color: #7e7e7e59;
+    border-color: #707070;
+}
+
+.tiramisu > img{
+    border-color: #707070;
+}
+
+.tiramisu > .description::first-letter,
+.tiramisu > h2,
+.tiramisu > h3,
+.tiramisu > ul > li:nth-child(odd),
+.tiramisu > ol > li:nth-child(odd){
+    color: #707070;
+}
+
+.tiramisu > ul > li:nth-child(odd),
+.tiramisu > ol > li:nth-child(odd){
+    text-decoration: underline dashed;
+}
+
+/* cookie */
+.cookie{
+    background-color: #30582e59;
+    border-color: #145a0b;
+}
+
+.cookie > img{
+    border-color: #145a0b;
+}
+
+.cookie > .description::first-letter,
+.cookie > h2,
+.cookie > h3,
+.cookie > ul > li:nth-child(3n),
+.cookie > ol > li:nth-child(3n){
+    color: #145a0b;
+}
+
+.cookie > ul > li:nth-child(3n),
+.cookie > ol > li:nth-child(3n){
+    text-decoration: underline wavy;
+}
