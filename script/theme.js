@@ -18,16 +18,16 @@ document.querySelector(".theme").addEventListener("click", (event) => {
         document.querySelector('html').classList.add('dark');
         document.querySelector('#header nav .theme').classList.add("uil-sun");
         document.querySelector('#header nav .theme').classList.remove("uil-moon");
-        image.src = './img/logo-light.png';
-        favicon.href = './img/logo-light.png';
+        image.src = '../img/logo-light.png';
+        favicon.href = '../img/logo-light.png';
         calendar.src = 'https://ghchart.rshah.org/007226/dzmitrysopat'
       }
       else {
         document.querySelector('html').classList.remove('dark');
         document.querySelector('#header nav .theme').classList.add("uil-moon");
         document.querySelector('#header nav .theme').classList.remove("uil-sun");
-        favicon.href = './img/logo.png';
-        image.src = 'img/logo.png';
+        favicon.href = '../img/logo.png';
+        image.src = '../img/logo.png';
         calendar.src = 'https://ghchart.rshah.org/007226/dzmitrysopat'
       }
     } catch (err) { }
