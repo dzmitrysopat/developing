@@ -30,7 +30,7 @@ body{
 }
 
 header{
-    height: 100px;
+    /* height: 100px; */
     z-index: 2;
     /* margin: 15px 0; */
     display: flex;
@@ -273,7 +273,7 @@ div[onclick]{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    /* justify-content: space-between; */
+    /* justify-content:space-between; */
     padding: 15px;
     border-radius: 15px;
 }
