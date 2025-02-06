@@ -30,6 +30,7 @@ body{
 }
 
 header{
+    height: 100px;
     z-index: 2;
     /* margin: 15px 0; */
     display: flex;

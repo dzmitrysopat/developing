@@ -108,6 +108,7 @@
     <script src="./script/script.js"></script>
     <script>
         includeHTML(() => {
+            
             // Код для обновления данных
             const progressContainer = document.getElementById("progress");
             const bodyContainer = document.querySelector('.score');
@@ -119,6 +120,13 @@
             if (progressContainer) progressContainer.value = htmlValue || 0;
             if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
         });
+
+    includeHTML(() => {
+        const themeScript = document.createElement("script");
+        themeScript.src = "./script/theme.js";
+        document.body.appendChild(themeScript);
+    });
+
     </script>
     
     
