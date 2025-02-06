@@ -479,6 +479,18 @@ footer{
     background-color: #383838;
 }
 
+.dark #progressBar,
+.dark .topic,
+.dark .topic-block,
+.dark .aside-progress{
+    background-color: #474747;
+    border-radius: 15px;
+}
+
+.dark .topic-block{
+    border-radius: 15px;
+}
+
 .dark ::selection{
     background: #75fe03;
 }
@@ -487,13 +499,24 @@ footer{
     background-color: #f7941d;
 }
 
+.dark .hw-block{
+    border: 2px solid #a1a1a1;
+}
+
 .dark i,
 .dark a,
 .dark box-icon,
 .dark h2,
+.dark h3,
+.dark h5,
+.dark span,
 .dark span.topic-name,
 .dark p.score{
     color: #eeeeee;
+}
+
+.dark .progress-block{
+    background-color: inherit;
 }
 
 .none{
