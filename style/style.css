@@ -337,19 +337,6 @@ article.hw-link{
     transition: all .6s;
 }
 
-/* h3{
-    padding: 0;
-    gap: 5px;
-    display: flex;
-    align-items: center;
-}
-
-h3 >i{
-    padding: 0;
-    font-size: 25px;
-    color: #383838 !important;
-} */
-
 section.hw-block{
     max-width: 315px;
     /* position: relative; */
@@ -369,32 +356,24 @@ img.hw-logo{
     height: 165px;
 }
 
-/* .article-css{
-    background-image: url('https://delta-dev-software.fr/wp-content/uploads/2024/05/CSS-Logo.png') !important;
-} */
-
 .css{
-    background-color: #4750F2 !important;
-    color: #fff !important;
+    /* background-color: #4750F2 !important; */
+    color: #4750F2 !important;
 }
 
 article.hw-link:hover{
     opacity: 1;
 }
 
-/* div.block-description{
-    position: absolute;
-    top: 200px;
-} */
 
 h3.hw-id{
-    top: -160px;
-    left: 10px;
-    position: absolute;
-    color: #fff;
-    background-color: #f7941d;
-    padding: 5px 10px;
-    border-radius: 8px;
+    /* top: -160px;
+    left: 10px; */
+    /* position: absolute; */
+    color: #f7941d;
+    /* background-color: #f7941d; */
+    /* padding: 5px 10px; */
+    /* border-radius: 8px; */
     width: fit-content;
     display: flex;
     gap: 5px;
@@ -403,9 +382,10 @@ h3.hw-id{
 }
 
 h3 > i{
-    color: #fff;
+    padding: 0;
+    color: #f7941d;
     font-size: 20px;
-    display: none !important;
+    /* display: none !important; */
 }
 
 h2{
