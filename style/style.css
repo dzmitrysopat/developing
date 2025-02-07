@@ -269,12 +269,7 @@ div[onclick]{
 .progress-block{
     align-items: center;
     display: flex;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
     width: fit-content;
-    margin-bottom: 20px;
     border: 2px solid #eee;
     border-radius: 8px;
     padding: 5px;
