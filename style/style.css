@@ -181,7 +181,8 @@ div#progressBar{
 .aside-progress{
     padding: 15px;
     display: flex;
-    /* gap: 10px; */
+    gap: 20px;
+    flex-direction: column;
     /* flex-wrap: wrap; */
 }
 
@@ -249,20 +250,6 @@ div[onclick]{
     width: fit-content;
 }
 
-.calendar-link{
-    width: fit-content;
-}
-
-.calendar{
-    padding: 15px;
-    border-radius: 8px;
-    border: 2px solid #eee;
-    /* width:max-content; */
-    /* scale: 0.5; */
-    background-color: #fff;
-    margin-bottom: 20px;
-}
-
 .topic{
     background-color: #fff;
     border-radius: 15px;
@@ -287,7 +274,7 @@ div[onclick]{
     grid-column-gap: 0px;
     grid-row-gap: 0px; */
     width: fit-content;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border: 2px solid #eee;
     border-radius: 8px;
     padding: 5px;
@@ -302,13 +289,6 @@ span.topic-name{
     margin-right: 25px;
 }
 
-.calendar{
-    margin-top: 25px;
-    /* margin-left: 0 !important; */
-    justify-self: start;
-    max-width: 50vw;
-}
-
 .progress-info{
     justify-content: center;
     display: flex;
@@ -320,16 +300,13 @@ p.score{
     color: #8d8e8d;
     font-size: 18px;
     font-weight: 700;
-    /* width: fit-content; */
-    /* grid-area: 1 / 2 / 2 / 3; */
+
 }
 
 progress{
     grid-area: 2 / 2 / 3 / 3;
-    /* width: 300px; */
     height: 8px;
     border-radius: 50px;
-    /* justify-content: space-between; */
 }
 
 progress::-webkit-progress-bar { 

@@ -89,8 +89,8 @@
   }
   
   .calendar {
-      width: 65%;
-      /* max-width: 800px; */
+      width: 100%;
+      max-width: 350px;
       background-color: inherit;
       border: 2px solid #eeeeee;
       color: #383838;
@@ -107,8 +107,7 @@
         padding: 10px;
     }
 }
-  
-  
+
   * {
       scrollbar-width: thin;
       scrollbar-color: #8d8e8d #eeeeee;
