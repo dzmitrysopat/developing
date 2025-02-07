@@ -357,7 +357,6 @@ img.hw-logo{
 }
 
 .css{
-    /* background-color: #4750F2 !important; */
     color: #4750F2 !important;
 }
 
@@ -429,6 +428,10 @@ li.completed {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+input{
+    
 }
 
 /* roadmap */
