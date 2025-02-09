@@ -50,3 +50,36 @@ document.querySelectorAll("h3").forEach(function(item){
   // console.log(item);
 });
 
+// css progress
+const progressCssContainer = document.getElementById("cssProgress");
+const cssBodyContainer = document.querySelector('.cssScore');
+const cssAttrs = document.querySelectorAll("section#cssBlock > section.hw-block");
+const cssProgressTemplate = 
+`<progress max="%max%" value="%value%"></progress>`;
+let cssValue = 0;
+
+progressContainer.max = cssAttrs.length;
+localStorage.setItem('cssProgress', progressCssContainer.max);
+
+for (const cssAttr of cssAttrs){
+    if (cssAttr.getAttribute('onclick').length == 0){
+        cssAttr.classList.add("gray");        
+        }
+    else{
+        cssValue = cssValue + 1;
+        // console.log(value);
+        progressCssContainer.cssValue = cssValue;
+        localStorage.setItem('cssValue', cssValue);
+    }    
+}
+
+// score in progress block
+const scoreTemplate = `<p class="score">%score%</p>`;
+
+let score = `${value}/${attrs.length}`;
+const questionNumber = scoreTemplate.replace('%score%', score);
+
+bodyContainer.innerHTML = questionNumber;
+console.log(questionNumber);
+
+localStorage.setItem('htmlNumber', questionNumber);
