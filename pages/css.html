@@ -144,27 +144,31 @@ document.querySelector('#year').textContent = currentYear;
     });
 
     includeHTML(() => {
-        // Проверяем, загружен ли aside с прогрессом
-        if (document.querySelector(".calendar")) {
-            // Загружаем скрипт GitHub Calendar, если он еще не загружен
-            const script = document.createElement("script");
-            script.src = "../script/github-calendar.js";
-            script.onload = () => {
-                GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});
-            };
-            document.body.appendChild(script);
-        }
-    });
-
-    includeHTML(() => {
     setTimeout(() => {
-        document.querySelectorAll(".aside-link").forEach(link => {
-            if (new URL(link.href, window.location.origin).pathname === window.location.pathname) {
+        const links = document.querySelectorAll(".aside-link");
+        const currentUrl = window.location.pathname;
+        
+        // Сначала убираем "active" у всех
+        links.forEach(link => link.classList.remove("active"));
+
+        links.forEach(link => {
+            if (!link.href || link.getAttribute("href") === "") {
+                console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                return; // Пропускаем ссылки без href
+            }
+
+            const linkPathname = new URL(link.href, window.location.origin).pathname;
+
+            console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+
+            if (linkPathname === currentUrl) {
+                console.log(`✅ Совпадение найдено: ${linkPathname}`);
                 link.classList.add("active");
             }
         });
-    }, 0); // Ждем загрузку aside
+    }, 0); // Ждём загрузку aside
 });
+
     </script>
 </body>
 </html>
