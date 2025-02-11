@@ -284,6 +284,16 @@ document.querySelector('#year').textContent = currentYear;
             document.body.appendChild(script);
         }
     });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        document.querySelectorAll(".aside-link").forEach(link => {
+            if (new URL(link.href, window.location.origin).pathname === window.location.pathname) {
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждем загрузку aside
+});
     </script>
 </body>
 </html>

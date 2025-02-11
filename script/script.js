@@ -1,3 +1,33 @@
+const observer = new MutationObserver(() => {
+  console.log("MutationObserver сработал! Проверяю aside...");
+  
+  const links = document.querySelectorAll(".aside-link");
+  console.log("Найдено ссылок:", links.length);
+
+  if (links.length > 0) {
+      observer.disconnect(); // Остановить наблюдение
+      const currentUrl = window.location.pathname;
+      console.log("Текущий URL:", currentUrl);
+
+      links.forEach(link => {
+          const linkPathname = new URL(link.href, window.location.origin).pathname;
+          console.log(`Сравниваю: ${linkPathname} с ${currentUrl}`);
+
+          if (linkPathname === currentUrl) {
+              console.log(`✅ Совпадение найдено: ${linkPathname}`);
+              console.log(link);
+              
+              link.classList.add("active"); // Добавляем класс
+              setTimeout(() => {
+                console.log("Проверка класса после 1 секунды:", link.classList.contains("active"));
+            }, 1000);
+          }
+      });
+  }
+});
+
+observer.observe(document.body, { childList: true, subtree: true });
+
 const progressContainer = document.getElementById("progress");
 const bodyContainer = document.querySelector('.score');
 const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
@@ -73,13 +103,3 @@ for (const cssAttr of cssAttrs){
     }    
 }
 
-// score in progress block
-const scoreTemplate = `<p class="score">%score%</p>`;
-
-let score = `${value}/${attrs.length}`;
-const questionNumber = scoreTemplate.replace('%score%', score);
-
-bodyContainer.innerHTML = questionNumber;
-console.log(questionNumber);
-
-localStorage.setItem('htmlNumber', questionNumber);

@@ -13,6 +13,7 @@
 </head>
 <body>
         <div w3-include-html="./pages/wrapper/header.html" id="header"></div>
+        
         <main>       
         <div w3-include-html="./pages/wrapper/aside.html" id="aside"></div>
 
@@ -139,6 +140,16 @@
             document.body.appendChild(script);
         }
     });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        document.querySelectorAll(".aside-link").forEach(link => {
+            if (new URL(link.href, window.location.origin).pathname === window.location.pathname) {
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждем загрузку aside
+});
     </script>
 </body>
 </html>

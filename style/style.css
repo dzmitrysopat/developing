@@ -135,16 +135,18 @@ a.aside-link{
     transition: all 1s;
 }
 
-a.aside-link:hover{
+a.aside-link:hover,
+a.active{
     padding: 10px;
     border-radius: 15px;
     background-color: #EBECF9;
     width: 250px;
-    color: #4750F2;
+    color: #4750F2 !important;
 }
 
-aside > a:hover > i{
-    color: #4750F2;
+aside > a:hover > i,
+aside > a.active > i{
+    color: #4750F2 !important;
 }
 
 aside > a,
@@ -170,6 +172,7 @@ aside > a:hover > i,
 a > i{
     font-size: 25px;
 }
+
 /* aside */
 
 /* progressBar */
@@ -226,6 +229,7 @@ div#progressBar{
 
 /* main */
 main{
+    flex-grow: 1;
     /* padding: 0% 2% 0 0%; */
     padding: 0;
     display: flex;
@@ -261,7 +265,7 @@ div[onclick]{
     flex-wrap: wrap;
     gap: 25px;
     /* justify-content:space-between; */
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 15px;
 }
 
@@ -334,7 +338,6 @@ article.hw-link{
 
 section.hw-block{
     max-width: 315px;
-    /* position: relative; */
     border-radius: 15px;
     border: 2px solid #eee;
     cursor: pointer;

@@ -72,7 +72,7 @@
                             <p class="description">Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков</p>    
                         </div>
                     </article>
-                </section><section class="hw-block"  onclick="">
+                </section><section class="hw-block" onclick="">
                     <img src="../img/training_hero_300px_light.png" alt="" class="hw-logo">
                     <article class="hw-link">
                         <h3 class="hw-id">CSS</h3>
@@ -155,6 +155,16 @@ document.querySelector('#year').textContent = currentYear;
             document.body.appendChild(script);
         }
     });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        document.querySelectorAll(".aside-link").forEach(link => {
+            if (new URL(link.href, window.location.origin).pathname === window.location.pathname) {
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждем загрузку aside
+});
     </script>
 </body>
 </html>
