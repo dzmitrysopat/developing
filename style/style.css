@@ -416,8 +416,14 @@ li {
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;
-    /* list-style-position: inside; */
 }
+
+ul > li > ul > li{
+    list-style-position: inside;
+    display: flex;
+    gap: 10px;
+}
+
 li.completed {
     background-color: #c3e9cc;
 }
