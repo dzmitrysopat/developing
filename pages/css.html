@@ -166,16 +166,16 @@ document.querySelector('#year').textContent = currentYear;
 
         links.forEach(link => {
             if (!link.href || link.getAttribute("href") === "") {
-                console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                // console.log(`⏩ Пропускаем ссылку без href: ${link}`);
                 return; // Пропускаем ссылки без href
             }
 
             const linkPathname = new URL(link.href, window.location.origin).pathname;
 
-            console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+            // console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
 
             if (linkPathname === currentUrl) {
-                console.log(`✅ Совпадение найдено: ${linkPathname}`);
+                // console.log(`✅ Совпадение найдено: ${linkPathname}`);
                 link.classList.add("active");
             }
         });
