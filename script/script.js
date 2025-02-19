@@ -1,25 +1,25 @@
 const observer = new MutationObserver(() => {
-  console.log("MutationObserver сработал! Проверяю aside...");
+  // console.log("MutationObserver сработал! Проверяю aside...");
   
   const links = document.querySelectorAll(".aside-link");
-  console.log("Найдено ссылок:", links.length);
+  // console.log("Найдено ссылок:", links.length);
 
   if (links.length > 0) {
       observer.disconnect(); // Остановить наблюдение
       const currentUrl = window.location.pathname;
-      console.log("Текущий URL:", currentUrl);
+      // console.log("Текущий URL:", currentUrl);
 
       links.forEach(link => {
           const linkPathname = new URL(link.href, window.location.origin).pathname;
-          console.log(`Сравниваю: ${linkPathname} с ${currentUrl}`);
+          // console.log(`Сравниваю: ${linkPathname} с ${currentUrl}`);
 
           if (linkPathname === currentUrl) {
-              console.log(`✅ Совпадение найдено: ${linkPathname}`);
-              console.log(link);
+              // console.log(`✅ Совпадение найдено: ${linkPathname}`);
+              // console.log(link);
               
               link.classList.add("active"); // Добавляем класс
               setTimeout(() => {
-                console.log("Проверка класса после 1 секунды:", link.classList.contains("active"));
+                // console.log("Проверка класса после 1 секунды:", link.classList.contains("active"));
             }, 1000);
           }
       });

@@ -33,14 +33,14 @@
                     <progress max="%max%" value="%value%" id="progress"></progress>    
                 </article>
             </section> -->
-
+<!-- 
             <section class="progress-block" id="cssProgress">
                 <span class="topic-name">CSS</span>
                 <article class="progress-info">
                     <p class="cssScore">%score</p>
                     <progress max="%max%" value="%value%""></progress>    
                 </article>
-            </section>
+            </section> -->
 
             <section class="topic-block" id="cssBlock">
                 <section class="hw-block" onclick="window.open('../pages/homeworks/CSS/homework_01/index.html'), '_blank'">
@@ -64,7 +64,7 @@
                     </article>
                 </section>
                 <section class="hw-block"  onclick="window.open('../pages/homeworks/CSS/homework_03/index.html', '_blank')">
-                    <img src="../img/training_hero_300px_dark.png" alt="" class="hw-logo">
+                    <img src="../img/dd22b57fb821569ea194a12d4f419b13.jpg" alt="" class="hw-logo">
                     <article class="hw-link">
                         <h3 class="hw-id">CSS</h3>
                         <div class="block-description">
@@ -73,11 +73,11 @@
                         </div>
                     </article>
                 </section><section class="hw-block" onclick="">
-                    <img src="../img/training_hero_300px_light.png" alt="" class="hw-logo">
+                    <img src="../img/f774785be8a904b7c3dab73a8c5f51f2.jpg" alt="" class="hw-logo">
                     <article class="hw-link">
                         <h3 class="hw-id">CSS</h3>
                         <div class="block-description">
-                            <h2 class="hw-name">Списки. Изображения</h2>
+                            <h2 class="hw-name">Grid</h2>
                             <p class="description">Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков</p>    
                         </div>
                     </article>
@@ -86,7 +86,7 @@
                     <article class="hw-link">
                         <h3 class="hw-id">CSS</h3>
                         <div class="block-description">
-                            <h2 class="hw-name">Списки. Изображения</h2>
+                            <h2 class="hw-name">Анимация. Медиазапросы</h2>
                             <p class="description">Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков</p>    
                         </div>
                     </article>
@@ -122,7 +122,7 @@ document.querySelector('#year').textContent = currentYear;
     </script>
     <script src="../script/script.js"></script>
     <script>includeHTML();</script>
-    <!-- <script src="../script/theme.js"></script> -->
+    <script src="../script/theme.js"></script>
     <script>
         includeHTML(() => {
             // Код для обновления данных
@@ -144,6 +144,19 @@ document.querySelector('#year').textContent = currentYear;
     });
 
     includeHTML(() => {
+        // Проверяем, загружен ли aside с прогрессом
+        if (document.querySelector(".calendar")) {
+            // Загружаем скрипт GitHub Calendar, если он еще не загружен
+            const script = document.createElement("script");
+            script.src = "../script/github-calendar.js";
+            script.onload = () => {
+                GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});
+            };
+            document.body.appendChild(script);
+        }
+    });
+
+    includeHTML(() => {
     setTimeout(() => {
         const links = document.querySelectorAll(".aside-link");
         const currentUrl = window.location.pathname;
@@ -153,16 +166,16 @@ document.querySelector('#year').textContent = currentYear;
 
         links.forEach(link => {
             if (!link.href || link.getAttribute("href") === "") {
-                console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                // console.log(`⏩ Пропускаем ссылку без href: ${link}`);
                 return; // Пропускаем ссылки без href
             }
 
             const linkPathname = new URL(link.href, window.location.origin).pathname;
 
-            console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+            // console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
 
             if (linkPathname === currentUrl) {
-                console.log(`✅ Совпадение найдено: ${linkPathname}`);
+                // console.log(`✅ Совпадение найдено: ${linkPathname}`);
                 link.classList.add("active");
             }
         });
