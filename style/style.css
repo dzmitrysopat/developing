@@ -267,7 +267,7 @@ div[onclick]{
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
-    /* justify-content:space-between; */
+    justify-content:space-between;
     /* padding: 15px; */
     border-radius: 15px;
 }
