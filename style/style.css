@@ -266,7 +266,7 @@ div[onclick]{
 .topic-block{
     display: grid;
     /* grid-auto-rows: 1fr; */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     /* grid-template-columns: repeat(1fr auto); */
     gap: 25px;
     justify-content:space-between;
