@@ -264,8 +264,10 @@ div[onclick]{
 }
 
 .topic-block{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* grid-auto-rows: 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(1fr auto); */
     gap: 25px;
     justify-content:space-between;
     /* padding: 15px; */
@@ -359,6 +361,7 @@ img.hw-logo{
 
 .css{
     color: #4750F2 !important;
+    background-color: #4750F2;
 }
 
 article.hw-link:hover{
@@ -366,13 +369,13 @@ article.hw-link:hover{
 }
 
 h3.hw-id{
-    /* top: -160px;
-    left: 10px; */
-    /* position: absolute; */
-    color: #f7941d;
-    /* background-color: #f7941d; */
-    /* padding: 5px 10px; */
-    /* border-radius: 8px; */
+    top: -160px;
+    left: 10px;
+    position: absolute;
+    color: #fff;
+    background-color: #f7941d;
+    padding: 5px 10px;
+    border-radius: 8px;
     width: fit-content;
     display: flex;
     gap: 5px;
@@ -382,7 +385,7 @@ h3.hw-id{
 
 h3 > i{
     padding: 0;
-    color: #f7941d;
+    color: #fff;
     font-size: 20px;
     /* display: none !important; */
 }
