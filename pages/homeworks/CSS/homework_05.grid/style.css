@@ -24,17 +24,20 @@ header{
 
 nav{
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(150px));
+    /* grid-template-columns: repeat(auto-fit, max(150px)); */
+    grid-template-columns: repeat(5, 1fr);
     gap: 15px;
+    justify-items: center;
 }
 
 a{
+    width: fit-content;
     color: #fff;
     font-size: 30px;
     text-decoration: none;
     background-color: #34c46b;
     border-radius: 25px;
-    padding: 5px 15px;
+    padding: 5px 25px;
     transition: all .4s;
 }
 
