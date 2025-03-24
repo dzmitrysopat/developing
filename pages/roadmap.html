@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" id="favicon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../script/wrapper.js"></script>
+    <title>Frontend Developer Plan</title>
+    <script>
+        // Функция для сохранения состояния чекбоксов
+        function saveState() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const state = Array.from(checkboxes).map(checkbox => checkbox.checked);
+            localStorage.setItem('checkboxState', JSON.stringify(state));
+        }
+
+        // Функция для загрузки состояния чекбоксов
+        function loadState() {
+            const state = JSON.parse(localStorage.getItem('checkboxState'));
+            if (state) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach((checkbox, index) => {
+                    checkbox.checked = state[index];
+                    toggleComplete(checkbox);
+                });
+            }
+        }
+
+        // Функция для управления подсветкой пунктов
+        function toggleComplete(checkbox) {
+            const listItem = checkbox.parentElement;
+            if (checkbox.checked) {
+                listItem.classList.add('completed');
+            } else {
+                listItem.classList.remove('completed');
+            }
+            saveState();
+        }
+
+        window.onload = loadState;
+    </script>
+</head>
+<body>
+    <div w3-include-html="../pages/wrapper/header.html" id="header"></div>
+    <main>
+    <div w3-include-html="../pages/wrapper/aside.html" id="aside"></div>
+    <article class="topic">
+        <h1>План подготовки на фронтенд-разработчика</h1>
+
+        <div class="section">
+            <h2>1. Основы веб-разработки</h2>
+            <h3>Срок: 1-2 месяца</h3>
+            <ul>
+                <li><strong>HTML</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)" id="structure"><label for="structure">Структура страницы, теги, семантический HTML.</label></li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Формы и их элементы.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Атрибуты, таблицы, списки.</li>
+                    </ul>
+                </li>
+                <li><strong>CSS</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Селекторы, стили, каскадность.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Flexbox, Grid Layout.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Анимации, медиа-запросы (адаптивная верстка).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Препроцессоры (например, SASS).</li>
+                    </ul>
+                </li>
+                <li><strong>Практика</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Верстка простых макетов.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Учись работать с Figma для чтения макетов дизайнеров.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h2>2. JavaScript: Основы программирования</h2>
+            <h3>Срок: 2-3 месяца</h3>
+            <ul>
+                <li><strong>Базовый синтаксис JavaScript</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Переменные, типы данных, операторы.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Условия, циклы, функции.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Массивы и объекты.</li>
+                    </ul>
+                </li>
+                <li><strong>Работа с DOM</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Поиск и изменение элементов.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">События (click, input и т.д.).</li>
+                    </ul>
+                </li>
+                <li><strong>Основы работы с API</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Fetch API, работа с JSON.</li>
+                    </ul>
+                </li>
+                <li><strong>Практика</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Создай интерактивные проекты (например, To-Do List, калькулятор).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h2>3. Продвинутый JavaScript</h2>
+            <h3>Срок: 2-3 месяца</h3>
+            <ul>
+                <li><strong>Модули и структуры данных</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">ES6+ (деструктуризация, стрелочные функции, async/await).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Classes, Promises.</li>
+                    </ul>
+                </li>
+                <li><strong>Алгоритмы и структуры данных</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Основы алгоритмов (сортировки, поиск).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Работа с деревьями и списками.</li>
+                    </ul>
+                </li>
+                <li><strong>Работа с браузером</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">LocalStorage/SessionStorage.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Cookies.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h2>4. Фреймворки и библиотеки</h2>
+            <h3>Срок: 3-4 месяца</h3>
+            <ul>
+                <li><strong>React</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Основы: компоненты, состояние (state), свойства (props).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Хуки (useState, useEffect).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Маршрутизация (React Router).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Управление состоянием (Redux/Zustand/Context API).</li>
+                    </ul>
+                </li>
+                <li><strong>Другие технологии</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Типизация (TypeScript).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Styled-components или Tailwind CSS.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Основы Next.js или другого SSR-фреймворка.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h2>5. Работа с инструментами</h2>
+            <h3>Срок: 1-2 месяца</h3>
+            <ul>
+                <li><strong>Система контроля версий</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Git: основные команды (commit, push, pull, merge).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">GitHub/GitLab: управление репозиториями.</li>
+                    </ul>
+                </li>
+                <li><strong>Сборщики</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Webpack, Vite или Parcel.</li>
+                    </ul>
+                </li>
+                <li><strong>Линтинг и тестирование</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">ESLint, Prettier.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Jest или React Testing Library.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h2>6. Практика и портфолио</h2>
+            <h3>Срок: 2-3 месяца</h3>
+            <ul>
+                <li><strong>Создай портфолио из 3-5 проектов:</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Лэндинг с адаптивной версткой.</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">SPA-приложение на React (например, блог, интернет-магазин).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Работа с API (например, погода, фильмопоиск).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Проект с использованием TypeScript.</li>
+                    </ul>
+                </li>
+                <li><strong>Работа с реальными заказами</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Фриланс-платформы (Upwork, Freelance.ru).</li>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Участие в open-source проектах.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="section">
+            <h2>7. Подготовка к трудоустройству</h2>
+            <h3>Срок: 1-2 месяца</h3>
+            <ul>
+                <li><strong>Резюме и LinkedIn</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Оформление резюме и профиля.</li>
+                    </ul>
+                </li>
+                <li><strong>Алгоритмы для собеседований</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Решение задач на LeetCode, Codewars.</li>
+                    </ul>
+                </li>
+                <li><strong>Подготовка к техническим интервью</strong>
+                    <ul>
+                        <li><input type="checkbox" onchange="toggleComplete(this)">Практика обсуждения кода и решений.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <p><strong>Примерная длительность:</strong> ~12-15 месяцев (при 15-20 часах в неделю).</p>
+    </article>
+    <div w3-include-html="../pages/wrapper/progress.html" id="progressBar"></div>
+    </main>
+    <div w3-include-html="../pages/wrapper/footer.html" id="footer"></div>
+
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+        const date = new Date();
+    const options = {  weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'  };
+    const dayOfWeek = date.toLocaleString('ru-RU', options);
+
+document.querySelector('#datetime').textContent = dayOfWeek;
+
+const yearOption = { year: 'numeric'};
+const currentYear = date.toLocaleString('ru-RU', yearOption);
+
+document.querySelector('#year').textContent = currentYear;
+}
+        setInterval(updateDateTime, 1000);
+    </script>
+    <script src="../script/script.js"></script>
+    <script>includeHTML();</script>
+    <script src="../script/theme.js"></script>
+    <script>
+        includeHTML(() => {
+            // Код для обновления данных
+            const progressContainer = document.getElementById("progress");
+            const bodyContainer = document.querySelector('.score');
+    
+            const htmlValue = localStorage.getItem('htmlValue');
+            const htmlProgress = localStorage.getItem('htmlProgress');
+            const questionNumber = localStorage.getItem('questionNumber');
+    
+            if (progressContainer) progressContainer.value = htmlValue || 0;
+            if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
+        });
+
+        includeHTML(() => {
+        const themeScript = document.createElement("script");
+        themeScript.src = "../script/theme.js";
+        document.body.appendChild(themeScript);
+    });
+
+    includeHTML(() => {
+        // Проверяем, загружен ли aside с прогрессом
+        if (document.querySelector(".calendar")) {
+            // Загружаем скрипт GitHub Calendar, если он еще не загружен
+            const script = document.createElement("script");
+            script.src = "../script/github-calendar.js";
+            script.onload = () => {
+                GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});
+            };
+            document.body.appendChild(script);
+        }
+    });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        const links = document.querySelectorAll(".aside-link");
+        const currentUrl = window.location.pathname;
+        
+        // Сначала убираем "active" у всех
+        links.forEach(link => link.classList.remove("active"));
+
+        links.forEach(link => {
+            if (!link.href || link.getAttribute("href") === "") {
+                console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                return; // Пропускаем ссылки без href
+            }
+
+            const linkPathname = new URL(link.href, window.location.origin).pathname;
+
+            console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+
+            if (linkPathname === currentUrl) {
+                console.log(`✅ Совпадение найдено: ${linkPathname}`);
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждём загрузку aside
+});
+
+    </script>
+</body>
+</html>

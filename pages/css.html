@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" id="favicon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <script src="../script/script.js" defer></script> -->
+    <script src="../script/wrapper.js"></script>
+    <title>Progress Dashboard</title>
+</head>
+<body>
+    <div w3-include-html="../pages/wrapper/header.html" id="header"></div>
+    
+    <main>
+        <div w3-include-html="../pages/wrapper/aside.html" id="aside"></div>
+        <!-- <div onclick="window.open('https://github.com/dzmitrysopat', '_blank')">
+            <script src="./script/github-calendar.js"></script>
+            <link rel="stylesheet" href="./style/github-calendar.css"/>
+            <div class="calendar">Loading Stuff...</div>
+            <script>GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});</script>
+        </div> -->
+
+        <article class="topic">
+            <!-- <h2 class="page-title">HTML</h2> -->
+            <!-- <section class="progress-block" id="Progress">
+                <span class="topic-name">CSS</span>
+                <article class="progress-info">
+                    <p class="score">%score</p>
+                    <progress max="%max%" value="%value%" id="progress"></progress>    
+                </article>
+            </section> -->
+<!-- 
+            <section class="progress-block" id="cssProgress">
+                <span class="topic-name">CSS</span>
+                <article class="progress-info">
+                    <p class="cssScore">%score</p>
+                    <progress max="%max%" value="%value%""></progress>    
+                </article>
+            </section> -->
+
+            <section class="topic-block" id="cssBlock">
+                <section class="hw-block" onclick="window.open('../pages/homeworks/CSS/homework_01/index.html'), '_blank'">
+                    <img src="https://ideacdn.net/idea/ct/82/myassets/blogs/css-nedir-css3.jpg?revision=1581695062" class="hw-logo" alt="">
+                    <article class="hw-link">
+                        <h3 class="hw-id"><i class='bx bxl-html5'> </i> CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Псевдоклассы. Псевдоэлементы</h2>
+                            <p class="description">Классы. Отступы. Границы. Цвета. Стилизация текста</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block"  onclick="window.open('../pages/homeworks/CSS/homework_02/index.html', '_blank')">
+                    <img src="https://media2.dev.to/dynamic/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnvx7kjixf1tarz5pm6xd.jpg" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id"><i class='bx bxl-html5'> </i>CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Background. Border. Стилизация текста. Позиционирование</h2>
+                            <p class="description">Background. Стилизация текста. Позиционирование</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block"  onclick="window.open('../pages/homeworks/CSS/homework_03/index.html', '_blank')">
+                    <img src="https://i.ytimg.com/vi/wsTv9y931o8/maxresdefault.jpg" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Flexbox</h2>
+                            <p class="description">Dispplay:flex. Flex-direction. Flex-wrap. Gap. Justify-content. Text-align</p>    
+                        </div>
+                    </article>
+                </section><section class="hw-block" onclick="window.open('../pages/homeworks/CSS/homework_04/index.html', '_blank')">
+                    <img src="https://miro.medium.com/v2/resize:fit:2000/1*m2Q3kRG9yl5WyNIyoe15XA.png" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Grid</h2>
+                            <p class="description">Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков</p>    
+                        </div>
+                    </article>
+                </section><section class="hw-block"  onclick="window.open('../pages/homeworks/CSS/homework_05/index.html', '_blank')">
+                    <img src="https://cdn-images-1.medium.com/max/954/1*_6MfwckxNfQTca9SiG8MdQ.png" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Анимация. Медиазапросы</h2>
+                            <p class="description">Transition. Translate. Keyframe</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block"  onclick="window.open('../pages/homeworks/CSS/homework_05.grid/index.html', '_blank')">
+                    <img src="https://i.ytimg.com/vi/qQfIjRjZpx0/maxresdefault.jpg" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id">CSS</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Анимация. Медиазапросы с помощью grid сетки</h2>
+                            <p class="description">Transition. Translate. Keyframe</p>    
+                        </div>
+                    </article>
+                </section>
+            </section>          
+        </article>
+
+        <div w3-include-html="../pages/wrapper/progress.html" id="progressBar"></div>
+    </main>
+    <div w3-include-html="../pages/wrapper/footer.html" id="footer"></div>
+
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+        const date = new Date();
+    const options = {  weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'  };
+    const dayOfWeek = date.toLocaleString('ru-RU', options);
+
+document.querySelector('#datetime').textContent = dayOfWeek;
+
+const yearOption = { year: 'numeric'};
+const currentYear = date.toLocaleString('ru-RU', yearOption);
+
+document.querySelector('#year').textContent = currentYear;
+}
+        setInterval(updateDateTime, 1000);
+    </script>
+    <script src="../script/script.js"></script>
+    <script>includeHTML();</script>
+    <script src="../script/theme.js"></script>
+    <script>
+        includeHTML(() => {
+            // Код для обновления данных
+            const progressContainer = document.getElementById("progress");
+            const bodyContainer = document.querySelector('.score');
+    
+            const htmlValue = localStorage.getItem('htmlValue');
+            const htmlProgress = localStorage.getItem('htmlProgress');
+            const questionNumber = localStorage.getItem('questionNumber');
+    
+            if (progressContainer) progressContainer.value = htmlValue || 0;
+            if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
+        });
+
+        includeHTML(() => {
+        const themeScript = document.createElement("script");
+        themeScript.src = "../script/theme.js";
+        document.body.appendChild(themeScript);
+    });
+
+    includeHTML(() => {
+        // Проверяем, загружен ли aside с прогрессом
+        if (document.querySelector(".calendar")) {
+            // Загружаем скрипт GitHub Calendar, если он еще не загружен
+            const script = document.createElement("script");
+            script.src = "../script/github-calendar.js";
+            script.onload = () => {
+                GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});
+            };
+            document.body.appendChild(script);
+        }
+    });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        const links = document.querySelectorAll(".aside-link");
+        const currentUrl = window.location.pathname;
+        
+        // Сначала убираем "active" у всех
+        links.forEach(link => link.classList.remove("active"));
+
+        links.forEach(link => {
+            if (!link.href || link.getAttribute("href") === "") {
+                // console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                return; // Пропускаем ссылки без href
+            }
+
+            const linkPathname = new URL(link.href, window.location.origin).pathname;
+
+            // console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+
+            if (linkPathname === currentUrl) {
+                // console.log(`✅ Совпадение найдено: ${linkPathname}`);
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждём загрузку aside
+});
+
+    </script>
+</body>
+</html>

@@ -1,24 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homeworks list</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" id="favicon">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./script/wrapper.js"></script>
+    <title>Progress Dashboard</title>
 </head>
 <body>
-    <h1>Homeworks list</h1>
-    <div id="links">
-        <a href="./homework01.html">Homework #01</a>
-        <a href="./homework_02/hw2.html">Homework #02</a>
-        <a href="./homework_03/index.html">Homework #03</a>
-        <a href="./homework_04/index.html">Homework #04</a>
-        <a href="">Homework #05</a>
-        <a href="">Homework #06</a>
-        <a href="">Homework #07</a>
-        <a href="">Homework #08</a>
-        <a href="">Homework #09</a>
-        <a href="">Homework #10</a>            
-    </div>
+        <div w3-include-html="./pages/wrapper/header.html" id="header"></div>
+        
+        <main>       
+        <div w3-include-html="./pages/wrapper/aside.html" id="aside"></div>
+
+        <article class="topic">
+            <!-- <section class="progress-block" id="ProgressHtml">
+                <span class="topic-name">HTML</span>
+                <article class="progress-info">
+                    <p class="score">%score</p>
+                    <progress max="%max%" value="%value%" id="progress"></progress>    
+                </article>
+            </section> -->
+            
+            <section class="topic-block" id="htmlBlock">
+                <section class="hw-block" onclick="window.open('./pages/homeworks/HTML/homework_01/hw_00.html'), '_blank'">
+                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/8080662/pub_63ee02275d448603daf9952b_63ee0635207f8f08e79718f5/scale_2400" class="hw-logo" alt="">
+                    <article class="hw-link">
+                        <h3 class="hw-id"><i class='bx bxl-html5'></i>HTML</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Базовая разметка</h2>
+                            <p class="description">Базовая разметка. Текстовые теги.</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block" onclick="window.open('./pages/homeworks/HTML/homework_02/second.html'), '_blank'">
+                    <img src="./img/the-ultimate-guide-to-notion-templates.png" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id"><i class='bx bxl-html5'> </i>HTML</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Списки. Изображения</h2>
+                            <p class="description">Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков</p>    
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block" onclick="window.open('./pages/homeworks/HTML/homework_03/index.html'), '_blank'">
+                    <img src="https://html5book.ru/wp-content/uploads/2016/02/shpargalka_po_tablicam.jpg" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id"><i class='bx bxl-html5'> </i>HTML</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Таблицы и формы</h2>
+                            <p class="description">Тэги для работы с таблицами. Форматирование таблиц. Формы. Поля форм.</p>
+                        </div>
+                    </article>
+                </section>
+                <section class="hw-block" onclick="window.open('./pages/homeworks/HTML/homework_04/index.html'), '_blank'">
+                    <img src="https://ipcalc.co/blog/wp-content/uploads/2019/04/rightblog.ru-html5-semantic.jpg" alt="" class="hw-logo">
+                    <article class="hw-link">
+                        <h3 class="hw-id"><i class='bx bxl-html5'> </i>HTML</h3>
+                        <div class="block-description">
+                            <h2 class="hw-name">Семантические теги. Аудио и видео</h2>
+                            <p class="description">Семантические теги. Аудио и видео</p>
+                        </div>
+                    </article>
+                </section>
+
+            </section>
+                </section>
+            </section>            
+        </article>
+        <div w3-include-html="./pages/wrapper/progress.html" id="progressBar"></div>
+
+    </main>
+    <div w3-include-html="./pages/wrapper/footer.html" id="footer"></div>
+
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+        const date = new Date();
+            const options = {  weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'  };
+            const dayOfWeek = date.toLocaleString('ru-RU', options);
+
+        document.querySelector('#datetime').textContent = dayOfWeek;
+
+        const yearOption = { year: 'numeric'};
+        const currentYear = date.toLocaleString('ru-RU', yearOption);
+
+        document.querySelector('#year').textContent = currentYear;
+        }
+                setInterval(updateDateTime, 1000);
+    </script>
+    <script src="./script/theme.js"></script>
+    <script src="./script/script.js"></script>
+    <script>
+        includeHTML(() => {
+            
+            // Код для обновления данных
+            const progressContainer = document.getElementById("progress");
+            const bodyContainer = document.querySelector('.score');
+    
+            const htmlValue = localStorage.getItem('htmlValue');
+            const htmlProgress = localStorage.getItem('htmlProgress');
+            const questionNumber = localStorage.getItem('questionNumber');
+    
+            if (progressContainer) progressContainer.value = htmlValue || 0;
+            if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
+        });
+
+    includeHTML(() => {
+        const themeScript = document.createElement("script");
+        themeScript.src = "./script/theme.js";
+        document.body.appendChild(themeScript);
+    });
+
+    includeHTML(() => {
+        // Проверяем, загружен ли aside с прогрессом
+        if (document.querySelector(".calendar")) {
+            // Загружаем скрипт GitHub Calendar, если он еще не загружен
+            const script = document.createElement("script");
+            script.src = "./script/github-calendar.js";
+            script.onload = () => {
+                GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});
+            };
+            document.body.appendChild(script);
+        }
+    });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        const links = document.querySelectorAll(".aside-link");
+        const currentUrl = window.location.pathname;
+        
+        // Сначала убираем "active" у всех
+        links.forEach(link => link.classList.remove("active"));
+
+        links.forEach(link => {
+            if (!link.href || link.getAttribute("href") === "") {
+                console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                return; // Пропускаем ссылки без href
+            }
+
+            const linkPathname = new URL(link.href, window.location.origin).pathname;
+
+            console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+
+            if (linkPathname === currentUrl) {
+                console.log(`✅ Совпадение найдено: ${linkPathname}`);
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждём загрузку aside
+});
+
+    </script>
 </body>
 </html>

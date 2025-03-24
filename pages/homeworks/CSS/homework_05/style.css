@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 25px 0;
+    background-color: #ddccec;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 100px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+h1{
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    padding: 5px 15px;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: #34c46b;
+    border-radius: 25px;
+    transition: all .4s;
+}
+
+a:hover{
+    color: #000;
+    background-color: #18743b;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.squares{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    /* align-items: center; */
+    gap: 15px;
+
+}
+
+.block{
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+    background-color: #8c09ff;
+    transition: all 2s;
+}
+
+.block:hover{
+    transform: rotate(360deg);
+}
+
+.ball-area{
+    position: relative;
+}
+
+.ball{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #34c46b;
+    border-radius: 50%;
+    animation: pinball;
+    animation-duration: 5s;
+    animation-delay: .5s;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.ball:hover{
+    animation-play-state: paused;
+}
+
+@keyframes pinball{
+    0%{
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+    }
+
+    20%{
+        border-radius: 50%;
+        top: 100px;
+        left: 20%;
+        background-color: #8c09ff;
+    }
+
+    40%{
+        border-radius: 50%;
+        top: 0px;
+        left: 40%;
+        background-color: #e5f04b;
+    }
+
+    60%{
+        border-radius: 50%;
+        top: 100px;
+        left: 60%;
+        background-color: #34c46b;
+    }
+
+    80%{
+        border-radius: 50%;
+        top: 0px;
+        left: 80%;
+        background-color: #4bb4f0;
+    }
+
+    100%{
+        border-radius: 50%;
+        top: 100px;
+        left: 100%;
+        background-color: #f0a34b;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>aside</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <aside class="aside-progress">
+        <h3>Progress scale</h3>
+
+            <script src="../../script/github-calendar.js"></script>
+            <link rel="stylesheet" href="../../style/github-calendar.css"/>
+            <div class="calendar">GitHub Claendar...</div>
+            <!-- <script>GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});</script> -->
+
+            <section class="progress-block" id="ProgressHtml">
+            <span class="topic-name">HTML</span>
+            <article class="progress-info">
+                <p class="score">%score%</p>
+                <progress max="%max%" value="%value%" id="progress"></progress>    
+            </article>
+        </section>
+            <!-- <section class="progress-block" id="ProgressCss">
+                <span class="topic-name">CSS</span>
+                <article class="progress-info">
+                    <p class="score">%score</p>
+                    <progress max="%max%" value="%value%" id="progress"></progress>    
+                </article>
+            </section> -->
+            <article class="lil-links">
+                <section class="progress-link" onclick="window.open('https://youtube.com/playlist?list=PLMJ4Yjs09WTyfoaW1N29obSWwjEK4wjvl&si=TsrwelH77n8SPniG'), '_blank'">
+                    <i class='bx bxl-youtube'></i>
+                    <div class="progress-link-description">
+                        <span>Youtube</span>
+                        <p>27 Видео</p>    
+                    </div>
+                </section>
+                <section class="progress-link" onclick="window.open('https://doka.guide/'), '_blank'">
+                    <i class='bx bx-plus-medical'></i>
+                    <div class="progress-link-description">
+                        <span>Doka</span>
+                        <p>Шпаргалка</p>    
+                    </div>
+                </section>    
+            </article>
+    </aside>
+    <script>
+        const progressContainer = document.getElementById("progress");
+        const bodyContainer = document.querySelector('.score');
+        const attrs = document.querySelectorAll("section.topic-block > section.hw-block");
+        const progressTemplate = `<progress max="%max%" value="%value%"></progress>`;
+        let value = 0;
+        const htmlProgress = localStorage.getItem('htmlProgress');
+        console.log(htmlProgress);
+        
+        const htmlValue = localStorage.getItem('htmlValue')
+        progressContainer.value = htmlValue; 
+
+        const questionNumber = localStorage.getItem('questionNumber');
+        const scoreTemplate = `<p class="score">%score%</p>`;
+
+let score = `${value}/${attrs.length}`;
+const htmlNumber = scoreTemplate.replace('%score%', score);
+
+bodyContainer.innerHTML = questionNumber;
+
+    </script>
+</body>
+</html>
