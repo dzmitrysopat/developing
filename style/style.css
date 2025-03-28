@@ -278,7 +278,7 @@ div[onclick]{
 .progress-block{
     align-items: center;
     display: flex;
-    width: fit-content;
+    /* width: fit-content; */
     border: 2px solid #eee;
     border-radius: 8px;
     padding: 5px;
@@ -309,6 +309,7 @@ p.score{
 progress{
     grid-area: 2 / 2 / 3 / 3;
     height: 8px;
+    width: 225px;
     border-radius: 50px;
 }
 
@@ -490,6 +491,10 @@ footer{
 
 .dark li.completed{
     color: #383838;
+}
+
+.dark li.completed{
+    background-color: #3efe03;
 }
 
 .dark i,
