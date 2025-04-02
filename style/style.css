@@ -382,6 +382,7 @@ h3.hw-id{
     gap: 5px;
     align-items: center;
     font-size: 15px;
+    text-transform: uppercase;
 }
 
 h3 > i{

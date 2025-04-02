@@ -1,15 +1,30 @@
 fetch('./script/html_list.json')
       .then(response => response.json())
       .then(data => {
-        document.getElementById("title").textContent = data[0].title;
-        document.getElementById("description").textContent = data[0].description;
-        document.getElementById("preview").src = data[0].image;
-        document.getElementById("topic").textContent = data[0].topic;
-        document.getElementById('homework').onclick = () => {
-          window.open(data[0].link, '_blank');}
-        console.log(data.title);
-      }
-    )
+        const container = document.getElementById('htmlBlock');
+
+        data.forEach(item =>{
+          const block = document.createElement('section');
+          block.classList.add('hw-block');
+          block.onclick = () => 
+            window.open(item.link, '_blank');
+          
+  block.innerHTML = `
+                <img src="${item.image}" class="hw-logo" alt="">
+                      <article class="hw-link">
+                          <h3 class="hw-id"><i class='bx bxl-html5'></i>${item.topic}</h3>
+                          <div class="block-description">
+                              <h2 class="hw-name">${item.title}</h2>
+                              <p class="description">${item.description}</p>    
+                          </div>
+                      </article>
+  `;
+  container.appendChild(block);
+        })
+        .catch(error => console.error('Ошибка загрузки JSON:', error));
+        })
+        
+
 
 const observer = new MutationObserver(() => {
 
