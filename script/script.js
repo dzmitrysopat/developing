@@ -1,4 +1,18 @@
+fetch('./script/html_list.json')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("title").textContent = data[0].title;
+        document.getElementById("description").textContent = data[0].description;
+        document.getElementById("preview").src = data[0].image;
+        document.getElementById("topic").textContent = data[0].topic;
+        document.getElementById('homework').onclick = () => {
+          window.open(data[0].link, '_blank');}
+        console.log(data.title);
+      }
+    )
+
 const observer = new MutationObserver(() => {
+
   // console.log("MutationObserver сработал! Проверяю aside...");
   
   const links = document.querySelectorAll(".aside-link");
