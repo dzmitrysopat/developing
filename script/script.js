@@ -1,7 +1,7 @@
 fetch('./script/html_list.json')
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById('htmlBlock');
+        const container = document.querySelector('.topic-block');
 
         data.forEach(item =>{
           const block = document.createElement('section');
