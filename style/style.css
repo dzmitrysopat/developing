@@ -317,7 +317,7 @@ progress::-webkit-progress-bar {
     background:  #c2c2c2; 
     border-radius: 25px;
 } 
-progress::-webkit-progress-value {
+progress::-webkit-progress-value { 
     background: #75fe03;
     border-radius: 50px;
 }
