@@ -1,0 +1,34 @@
+[
+    {
+    "id": 1,
+    "title": "Базовая разметка",
+    "description":"Базовая разметка. Текстовые теги.",
+    "topic": "html",
+    "image":"https://avatars.dzeninfra.ru/get-zen_doc/8080662/pub_63ee02275d448603daf9952b_63ee0635207f8f08e79718f5/scale_2400",
+    "link":"./pages/homeworks/HTML/homework_01/hw_00.html"
+},
+{
+    "id": 2,
+    "title": "Списки. Изображения",
+    "description":"Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков",
+    "topic": "html",
+    "image":"./img/the-ultimate-guide-to-notion-templates.png",
+    "link":"./pages/homeworks/HTML/homework_02/second.html"
+},
+{
+    "id": 3,
+    "title": "Таблицы и формы",
+    "description":"Тэги для работы с таблицами. Форматирование таблиц. Формы. Поля форм.",
+    "topic": "html",
+    "image":"https://html5book.ru/wp-content/uploads/2016/02/shpargalka_po_tablicam.jpg",
+    "link":"./pages/homeworks/HTML/homework_03/index.html"
+},
+{
+    "id": 4,
+    "title": "Семантические теги. Аудио и видео",
+    "description":"Семантические теги. Аудио и видео",
+    "topic": "html",
+    "image":"https://ipcalc.co/blog/wp-content/uploads/2019/04/rightblog.ru-html5-semantic.jpg",
+    "link":"./pages/homeworks/HTML/homework_04/index.html"
+}
+]

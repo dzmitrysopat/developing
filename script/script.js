@@ -1,3 +1,16 @@
+fetch('./script/data.json')
+.then(response => response.json())
+.then(data => {
+  console.log(data.title);
+  document.getElementById("title").textContent = data.title;
+  document.getElementById("description").textContent = data.description;
+  document.getElementById("preview").src = data.image;
+  document.getElementById("hw-block").onclick = () => {
+    window.open(data.link, '_blank');
+  };
+})
+.catch(error => console.error('json_error', error));
+
 const observer = new MutationObserver(() => {
   // console.log("MutationObserver сработал! Проверяю aside...");
   
