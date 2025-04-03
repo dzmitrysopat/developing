@@ -38,9 +38,11 @@ fetch('./script/html_list.json')
           
           function cssFilter() {
           document.querySelectorAll('.hw-block').forEach(block => {
+            let hwIdelement = block.querySelector('.hw-id');
           let hwId = block.querySelector('.hw-id').textContent.trim().toLowerCase();
           if (hwId.includes("css")) {
           block.style.display = "block";
+          hwIdelement.classList.add("css");
           } else {
           block.style.display = "none";
           }

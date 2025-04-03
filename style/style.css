@@ -361,8 +361,11 @@ img.hw-logo{
 }
 
 .css{
-    color: #4750F2 !important;
-    background-color: #4750F2;
+    background-color: #4750F2 !important;
+}
+
+h3:hover > i{
+    color: #fff;
 }
 
 article.hw-link:hover{
