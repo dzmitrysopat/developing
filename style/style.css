@@ -439,7 +439,6 @@ h3.hw-id,
 }
 
 [type="search"]{
-    display: none;
     height: 30px;
     max-width: 300px;
     padding: 5px;
@@ -593,6 +592,10 @@ footer{
 .sark input[type="search"]:focus{
     border-color: #fff;
     color: #fff;
+}
+
+.show{
+    display: block;
 }
 
 .none{

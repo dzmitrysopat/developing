@@ -65,10 +65,14 @@ fetch('./script/html_list.json')
 const searchFilter = document.querySelector('#search');
 
 function showSearchFilter(){
-  if (searchFilter.style.display = "none"){
-    searchFilter.style.display = "block"
-  } else if (searchFilter.style.display = "block"){
-    searchFilter.style.display = "none";
+  if (searchFilter.className = "none"){
+    searchFilter.classList.remove("none");
+    searchFilter.classList.toggle('show');
+  } else if (searchFilter.className = "show"){
+    searchFilter.style.display = 'none';
+    searchFilter.classList.remove('show');
+    searchFilter.classList.toggle('none');
+
   }
   }
 
