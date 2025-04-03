@@ -431,10 +431,11 @@ h3.hw-id,
     position: absolute;
     right: 1%;
     gap: 5px;
+    border-radius: 8px;
 }
 
 .search-block > i{
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
 
@@ -443,7 +444,8 @@ h3.hw-id,
     max-width: 500px;
     padding: 5px;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
+    color: #fff;
     border-color: #eee;
     background-color: inherit;
 }
