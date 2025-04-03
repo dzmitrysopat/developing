@@ -411,6 +411,10 @@ h3.hw-id,
     background-color: #4750F2;
 }
 
+.filter-btn:nth-child(3){
+    background-color: #f7d61d;
+}
+
 .filter-btn:last-child{
     background-color: #0084ff;
 }
