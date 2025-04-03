@@ -4,7 +4,8 @@ fetch('./script/html_list.json')
         const container = document.querySelector('.topic-block');
 
         data.forEach(item =>{
-          const block = document.createElement('section');
+          if (item.topic === "html"){
+            const block = document.createElement('section');
           block.classList.add('hw-block');
           block.onclick = () => 
             window.open(item.link, '_blank');
@@ -20,6 +21,10 @@ fetch('./script/html_list.json')
                       </article>
   `;
   container.appendChild(block);
+          }
+          else{
+           document.querySelectorAll(".hw-block").style.display == "none";
+          }
         })
         .catch(error => console.error('Ошибка загрузки JSON:', error));
         })
@@ -31,12 +36,12 @@ const observer = new MutationObserver(() => {
   // console.log("MutationObserver сработал! Проверяю aside...");
   
   const links = document.querySelectorAll(".aside-link");
-  // console.log("Найдено ссылок:", links.length);
+  console.log("Найдено ссылок:", links.length);
 
   if (links.length > 0) {
       observer.disconnect(); // Остановить наблюдение
       const currentUrl = window.location.pathname;
-      // console.log("Текущий URL:", currentUrl);
+      console.log("Текущий URL:", currentUrl);
 
       links.forEach(link => {
           const linkPathname = new URL(link.href, window.location.origin).pathname;
