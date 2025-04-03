@@ -25,6 +25,33 @@ fetch('./script/html_list.json')
         })
         
 
+        function htmlFilter() {
+          document.querySelectorAll('.hw-block').forEach(block => {
+          let hwId = block.querySelector('.hw-id').textContent.trim().toLowerCase();
+          if (hwId.includes("html")) {
+          block.style.display = "block";
+          } else {
+          block.style.display = "none";
+          }
+          });
+          }
+          
+          function cssFilter() {
+          document.querySelectorAll('.hw-block').forEach(block => {
+          let hwId = block.querySelector('.hw-id').textContent.trim().toLowerCase();
+          if (hwId.includes("css")) {
+          block.style.display = "block";
+          } else {
+          block.style.display = "none";
+          }
+          });
+          }
+          
+          function resetFilter() {
+          document.querySelectorAll('.hw-block').forEach(block => {
+          block.style.display = "block";
+          });
+          }
 
 const observer = new MutationObserver(() => {
 
