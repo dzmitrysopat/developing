@@ -1,4 +1,5 @@
-const htmlBlock = document.querySelectorAll("hw-block");
+const blocks = document.querySelectorAll(".hw-block");
+const topicList = document.querySelectorAll(".hw-id");
 
 fetch('./script/html_list.json')
 .then(response => response.json())
@@ -28,11 +29,9 @@ container.appendChild(block);
 
 function htmlFilter(){
   const blocks = document.querySelectorAll(".hw-block");
-  const topicList = document.querySelectorAll(".hw-id");
-
+const topicList = document.querySelectorAll(".hw-id");
   for (const block of blocks) {
-    console.log(topicList);
-     
+    console.log(topicList);     
     for (const topic of topicList) {
       if (topic.textContent == "css"){
         console.log(topic);
@@ -40,11 +39,15 @@ function htmlFilter(){
         block.classList.add("none");
       }
   }
- 
   
   }
 }
 
+function resetFilter(){
+  const blocks = document.querySelectorAll(".hw-block");
+  for (const block of blocks) {
+  block.classList.remove("none");
+}}
         
 
 
