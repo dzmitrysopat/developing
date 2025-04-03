@@ -1,30 +1,50 @@
-fetch('./script/html_list.json')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.querySelector('.topic-block');
+const htmlBlock = document.querySelectorAll("hw-block");
 
-        data.forEach(item =>{
-          if (item.topic == "html"){
-            const block = document.createElement('section');
-          block.classList.add('hw-block');
-          block.onclick = () => 
-            window.open(item.link, '_blank');
-          
-  block.innerHTML = `
-                <img src="${item.image}" class="hw-logo" alt="">
-                      <article class="hw-link">
-                          <h3 class="hw-id"><i class='bx bxl-html5'></i>${item.topic}</h3>
-                          <div class="block-description">
-                              <h2 class="hw-name">${item.title}</h2>
-                              <p class="description">${item.description}</p>    
-                          </div>
-                      </article>
-  `;
-  container.appendChild(block);
-          }
-          })
-        .catch(error => console.error('Ошибка загрузки JSON:', error));
-        })
+fetch('./script/html_list.json')
+.then(response => response.json())
+.then(data => {
+  const container = document.querySelector('.topic-block');
+
+  data.forEach(item =>{
+    const block = document.createElement('section');
+    block.classList.add('hw-block');
+    block.onclick = () => 
+      window.open(item.link, '_blank');
+    
+block.innerHTML = `
+          <img src="${item.image}" class="hw-logo" alt="">
+                <article class="hw-link">
+                    <h3 class="hw-id"><i class='bx bxl-html5'></i>${item.topic}</h3>
+                    <div class="block-description">
+                        <h2 class="hw-name">${item.title}</h2>
+                        <p class="description">${item.description}</p>    
+                    </div>
+                </article>
+`;
+container.appendChild(block);
+  })
+  .catch(error => console.error('Ошибка загрузки JSON:', error));
+  })
+
+function htmlFilter(){
+  const blocks = document.querySelectorAll(".hw-block");
+  const topicList = document.querySelectorAll(".hw-id");
+
+  for (const block of blocks) {
+    console.log(topicList);
+     
+    for (const topic of topicList) {
+      if (topic.textContent == "css"){
+        console.log(topic);
+        
+        block.classList.add("none");
+      }
+  }
+ 
+  
+  }
+}
+
         
 
 
@@ -33,12 +53,12 @@ const observer = new MutationObserver(() => {
   // console.log("MutationObserver сработал! Проверяю aside...");
   
   const links = document.querySelectorAll(".aside-link");
-  console.log("Найдено ссылок:", links.length);
+  // console.log("Найдено ссылок:", links.length);
 
   if (links.length > 0) {
       observer.disconnect(); // Остановить наблюдение
       const currentUrl = window.location.pathname;
-      console.log("Текущий URL:", currentUrl);
+      // console.log("Текущий URL:", currentUrl);
 
       links.forEach(link => {
           const linkPathname = new URL(link.href, window.location.origin).pathname;
@@ -101,7 +121,7 @@ document.querySelectorAll("h3").forEach(function(item){
   content.push(item.textContent);
   for (const item of content){
     console.log(item);
-  if (item === "CSS"){
+  if (item == "CSS"){
     document.querySelectorAll("h3").forEach(item => item.classList.add("css"));
     document.querySelectorAll("i").forEach(item => item.classList.add("css"));
     document.querySelectorAll("i").forEach(item => item.classList.remove("bxl-html5")); 

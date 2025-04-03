@@ -391,7 +391,7 @@ h3.hw-id,
     display: flex;
     padding: 15px;
     background: inherit;
-    border: 1px solid #eeeeee;
+    border: 2px solid #eeeeee;
     border-radius: 8px;
     box-shadow: 10px 8px 14px rgba(0, 0, 0, 0.1);
 }
@@ -406,6 +406,10 @@ h3.hw-id,
 
 .filter-btn:nth-child(2){
     background-color: #4750F2;
+}
+
+.filter-btn:last-child{
+    background-color: #0084ff;
 }
 
 .filter-btn:hover{
@@ -549,5 +553,5 @@ footer{
 }
 
 .none{
-    display: none;
+    display: none !important;
 }
