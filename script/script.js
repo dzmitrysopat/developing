@@ -62,6 +62,16 @@ fetch('./script/html_list.json')
           });
           }
 
+const searchFilter = document.querySelector('#search');
+
+function showSearchFilter(){
+  if (searchFilter.style.display = "none"){
+    searchFilter.style.display = "block"
+  } else if (searchFilter.style.display = "block"){
+    searchFilter.style.display = "none";
+  }
+  }
+
 const observer = new MutationObserver(() => {
 
   // console.log("MutationObserver сработал! Проверяю aside...");

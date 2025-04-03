@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */ /* #409ba5 */ /* #007226 */
+/* #75FE03 */ /* #dddddd */ /* #383838 */ /* #f7941d */ /* #409ba5 */ /* #007226 */ /* #4750F2 */ /* #0084ff */
 
 *{
     font-family: "Poppins", sans-serif;
@@ -99,7 +99,7 @@ nav > a.active-link:after {
 nav a.active-link,
 nav a.active-link >i,
 i:hover{
-    color: #4750F2;
+    color: #0084ff;
 }
 
 nav > i{
@@ -142,12 +142,12 @@ a.active{
     border-radius: 15px;
     background-color: #EBECF9;
     width: 250px;
-    color: #4750F2 !important;
+    color: #0084ff !important;
 }
 
 aside > a:hover > i,
 aside > a.active > i{
-    color: #4750F2 !important;
+    color: #0084ff !important;
 }
 
 aside > a,
@@ -291,6 +291,7 @@ span.topic-name{
     font-size: 40px;
     font-weight: 800;
     margin-right: 25px;
+    color: #0084ff;
 }
 
 .progress-info{
@@ -318,7 +319,7 @@ progress::-webkit-progress-bar {
     border-radius: 25px;
 } 
 progress::-webkit-progress-value { 
-    background: #75fe03;
+    background: #0084ff;
     border-radius: 50px;
 }
 
@@ -390,6 +391,7 @@ h3.hw-id,
 }
 
 .filter{
+    position: relative;
     gap: 15px;
     display: flex;
     padding: 15px;
@@ -415,12 +417,36 @@ h3.hw-id,
     background-color: #f7d61d;
 }
 
-.filter-btn:last-child{
+.filter-btn:nth-child(4){
     background-color: #0084ff;
 }
 
 .filter-btn:hover{
     opacity: 0.7;
+}
+
+.search-block{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 1%;
+    gap: 5px;
+}
+
+.search-block > i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+[type="search"]{
+    display: none;
+    height: 30px;
+    max-width: 300px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border-color: #eee;
+    background-color: inherit;
 }
 
 h3 > i,
@@ -524,7 +550,7 @@ footer{
 }
 
 .dark #datetime{
-    background-color: #f7941d;
+    background-color: #0084ff;
 }
 
 .dark .hw-block{
@@ -555,8 +581,18 @@ footer{
     color: #eeeeee;
 }
 
+.dark i:hover{
+    color: #0084ff;
+}
+
 .dark .progress-block{
     background-color: inherit;
+}
+
+.dark input[type="search"],
+.sark input[type="search"]:focus{
+    border-color: #fff;
+    color: #fff;
 }
 
 .none{
