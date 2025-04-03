@@ -12,7 +12,7 @@ fetch('./script/html_list.json')
   block.innerHTML = `
                 <img src="${item.image}" class="hw-logo" alt="">
                       <article class="hw-link">
-                          <h3 class="hw-id"><i class='bx bxl-html5'></i>${item.topic}</h3>
+                          <h3 class="hw-id"><i class='${item.icon}'></i>${item.topic}</h3>
                           <div class="block-description">
                               <h2 class="hw-name">${item.title}</h2>
                               <p class="description">${item.description}</p>    
@@ -23,7 +23,9 @@ fetch('./script/html_list.json')
 
   let hwIdelement = block.querySelector('.hw-id');
   if (item.topic == "css"){
-    hwIdelement.classList.add("css")
+    hwIdelement.classList.add("css");
+    // document.querySelector("i").classList.remove("bxl-html5");
+    document.querySelector("i").classList.add("bxl-css3");
   }
         })
         .catch(error => console.error('Ошибка загрузки JSON:', error));
