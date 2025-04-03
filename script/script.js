@@ -1,53 +1,28 @@
-const blocks = document.querySelectorAll(".hw-block");
-const topicList = document.querySelectorAll(".hw-id");
-
 fetch('./script/html_list.json')
-.then(response => response.json())
-.then(data => {
-  const container = document.querySelector('.topic-block');
+      .then(response => response.json())
+      .then(data => {
+        const container = document.querySelector('.topic-block');
 
-  data.forEach(item =>{
-    const block = document.createElement('section');
-    block.classList.add('hw-block');
-    block.onclick = () => 
-      window.open(item.link, '_blank');
-    
-block.innerHTML = `
-          <img src="${item.image}" class="hw-logo" alt="">
-                <article class="hw-link">
-                    <h3 class="hw-id"><i class='bx bxl-html5'></i>${item.topic}</h3>
-                    <div class="block-description">
-                        <h2 class="hw-name">${item.title}</h2>
-                        <p class="description">${item.description}</p>    
-                    </div>
-                </article>
-`;
-container.appendChild(block);
-  })
-  .catch(error => console.error('Ошибка загрузки JSON:', error));
-  })
-
-function htmlFilter(){
-  const blocks = document.querySelectorAll(".hw-block");
-const topicList = document.querySelectorAll(".hw-id");
-  for (const block of blocks) {
-    console.log(topicList);     
-    for (const topic of topicList) {
-      if (topic.textContent == "css"){
-        console.log(topic);
-        
-        block.classList.add("none");
-      }
-  }
-  
-  }
-}
-
-function resetFilter(){
-  const blocks = document.querySelectorAll(".hw-block");
-  for (const block of blocks) {
-  block.classList.remove("none");
-}}
+        data.forEach(item =>{
+          const block = document.createElement('section');
+          block.classList.add('hw-block');
+          block.onclick = () => 
+            window.open(item.link, '_blank');
+          
+  block.innerHTML = `
+                <img src="${item.image}" class="hw-logo" alt="">
+                      <article class="hw-link">
+                          <h3 class="hw-id"><i class='bx bxl-html5'></i>${item.topic}</h3>
+                          <div class="block-description">
+                              <h2 class="hw-name">${item.title}</h2>
+                              <p class="description">${item.description}</p>    
+                          </div>
+                      </article>
+  `;
+  container.appendChild(block);
+        })
+        .catch(error => console.error('Ошибка загрузки JSON:', error));
+        })
         
 
 
