@@ -4,7 +4,7 @@ fetch('./script/html_list.json')
         const container = document.querySelector('.topic-block');
 
         data.forEach(item =>{
-          if (item.topic === "html"){
+          if (item.topic == "html"){
             const block = document.createElement('section');
           block.classList.add('hw-block');
           block.onclick = () => 
@@ -22,10 +22,7 @@ fetch('./script/html_list.json')
   `;
   container.appendChild(block);
           }
-          else{
-           document.querySelectorAll(".hw-block").style.display == "none";
-          }
-        })
+          })
         .catch(error => console.error('Ошибка загрузки JSON:', error));
         })
         
@@ -104,7 +101,7 @@ document.querySelectorAll("h3").forEach(function(item){
   content.push(item.textContent);
   for (const item of content){
     console.log(item);
-  if (item == "CSS"){
+  if (item === "CSS"){
     document.querySelectorAll("h3").forEach(item => item.classList.add("css"));
     document.querySelectorAll("i").forEach(item => item.classList.add("css"));
     document.querySelectorAll("i").forEach(item => item.classList.remove("bxl-html5")); 
