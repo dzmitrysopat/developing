@@ -20,6 +20,11 @@ fetch('./script/html_list.json')
                       </article>
   `;
   container.appendChild(block);
+
+  let hwIdelement = block.querySelector('.hw-id');
+  if (item.topic == "css"){
+    hwIdelement.classList.add("css")
+  }
         })
         .catch(error => console.error('Ошибка загрузки JSON:', error));
         })
