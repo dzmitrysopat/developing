@@ -65,11 +65,10 @@ fetch('./script/html_list.json')
 const searchFilter = document.querySelector('#search');
 
 function showSearchFilter(){
-  if (searchFilter.className = "none"){
+  if (searchFilter.classList.contains("none")){
     searchFilter.classList.remove("none");
     searchFilter.classList.toggle('show');
-  } else if (searchFilter.className = "show"){
-    searchFilter.style.display = 'none';
+  } else if (searchFilter.classList.contains("show")){
     searchFilter.classList.remove('show');
     searchFilter.classList.toggle('none');
 
