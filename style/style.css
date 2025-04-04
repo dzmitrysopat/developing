@@ -642,22 +642,30 @@ form{
 
 form > input,
 form > select{
-    max-width: 50%;
+    /* max-width: 50%; */
     height: 1.5rem;
-    border-radius: 8px;
+    border: 2px solid #383838;
+    border-radius: 0 0px 8px 8px;
     padding: 5px 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: 500;
     font-size: 15px;
+    outline: none;
 }
 
 form > select{
     height: 2.2rem;
     border: 2px solid #383838;
-    max-width: 53.5%;
+    /* max-width: 53.5%; */
 }
 
 form > label{
+    padding: 2px 10px 2px 10px;
+    /* width: fit-content; */
+    background-color: #383838;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+    margin: 0 0 0px 0px;
     /* text-transform: uppercase; */
     font-weight: 500;
     text-decoration: 2px underline;
@@ -666,5 +674,5 @@ form > label{
 form > button {
     font-size: 15px;
     text-transform:none !important;
-    background-color: #0084ff !important;
+    background-color: #383838 !important;
 }
