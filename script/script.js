@@ -71,7 +71,6 @@ function showSearchFilter(){
   } else if (searchFilter.classList.contains("show")){
     searchFilter.classList.remove('show');
     searchFilter.classList.toggle('none');
-
   }
   }
 
