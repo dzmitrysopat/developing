@@ -21,11 +21,11 @@
         <h1>Добавить запись</h1>
         <form action="" method="post">
             <label for="idaentificator">id</label>
-            <input placeholder="1" required autofocus type="number" maxlength="2" id="identificator">
+            <input name="id" placeholder="1" required autofocus type="number" maxlength="2" id="identificator">
             <label for="title">title</label>
-            <input placeholder="Display: flex" required type="text" id="title">
+            <input name="title" placeholder="Display: flex" required type="text" id="title">
             <label for="description">description</label>
-            <input placeholder="flex-wrap. flex-direction. justify-content. align-content" required type="text" id="description">
+            <input name="description" placeholder="flex-wrap. flex-direction. justify-content. align-content" required type="text" id="description">
             <label for="topic">topic</label>
             <select name="topic" id="topic">
                 <option value="choose" hidden>choose topic</option>
@@ -34,12 +34,12 @@
                 <option value="js">js</option>
             </select>
             <label for="image">image link</label>
-            <input placeholder="./img/the-ultimate-guide-to-notion-templates.png" required type="url" name="image" id="image">
+            <input name="image" placeholder="./img/the-ultimate-guide-to-notion-templates.png" required type="url" name="image" id="image">
             <label for="link">link</label>
-            <input placeholder="../pages/homeworks/CSS/homework_01/index.html" required type="url" name="link" id="link">
+            <input name="link" placeholder="../pages/homeworks/CSS/homework_01/index.html" required type="url" name="link" id="link">
             <label for="icon">topic icon</label>
-            <input placeholder="bx bxl-html5" required type="text" readonly>
-            <button type="button" class="filter-btn">Добавить</button>
+            <input name="icon" placeholder="bx bxl-html5" required type="text" readonly>
+            <button type="submit" class="filter-btn">Добавить</button>
         </form>
     </article>
     <div w3-include-html="../pages/wrapper/progress.html" id="progressBar"></div>

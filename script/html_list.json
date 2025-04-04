@@ -1,91 +1,91 @@
-[{
+[
+  {
     "id": 1,
     "title": "Базовая разметка",
-    "description":"Базовая разметка. Текстовые теги.",
+    "description": "Базовая разметка. Текстовые теги.",
     "topic": "html",
-    "image":"https://avatars.dzeninfra.ru/get-zen_doc/8080662/pub_63ee02275d448603daf9952b_63ee0635207f8f08e79718f5/scale_2400",
-    "link":"../pages/homeworks/HTML/homework_01/hw_00.html",
+    "image": "https://avatars.dzeninfra.ru/get-zen_doc/8080662/pub_63ee02275d448603daf9952b_63ee0635207f8f08e79718f5/scale_2400",
+    "link": "../pages/homeworks/HTML/homework_01/hw_00.html",
     "icon": "bx bxl-html5"
-},
-{
+  },
+  {
     "id": 2,
     "title": "Списки. Изображения",
-    "description":"Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков",
+    "description": "Виды изображений. Теги img, svg, figure, figcaption. Расширения изображений. <br>Виды списков. Стилизация списков",
     "topic": "html",
-    "image":"./img/the-ultimate-guide-to-notion-templates.png",
-    "link":"./pages/homeworks/HTML/homework_02/second.html",
+    "image": "./img/the-ultimate-guide-to-notion-templates.png",
+    "link": " ",
     "icon": "bx bxl-html5"
-},
-{
+  },
+  {
     "id": 3,
     "title": "Таблицы и формы",
-    "description":"Тэги для работы с таблицами. Форматирование таблиц. Формы. Поля форм.",
+    "description": "Тэги для работы с таблицами. Форматирование таблиц. Формы. Поля форм.",
     "topic": "html",
-    "image":"https://html5book.ru/wp-content/uploads/2016/02/shpargalka_po_tablicam.jpg",
-    "link":"./pages/homeworks/HTML/homework_03/index.html",
+    "image": "https://html5book.ru/wp-content/uploads/2016/02/shpargalka_po_tablicam.jpg",
+    "link": "./pages/homeworks/HTML/homework_03/index.html",
     "icon": "bx bxl-html5"
-},
-{
+  },
+  {
     "id": 4,
     "title": "Семантические теги. Аудио и видео",
-    "description":"Семантические теги. Аудио и видео",
+    "description": "Семантические теги. Аудио и видео",
     "topic": "html",
-    "image":"https://ipcalc.co/blog/wp-content/uploads/2019/04/rightblog.ru-html5-semantic.jpg",
-    "link":"./pages/homeworks/HTML/homework_04/index.html",
+    "image": "https://ipcalc.co/blog/wp-content/uploads/2019/04/rightblog.ru-html5-semantic.jpg",
+    "link": "./pages/homeworks/HTML/homework_04/index.html",
     "icon": "bx bxl-html5"
-},
-{
+  },
+  {
     "id": 5,
     "title": "Псевдоклассы. Псевдоэлементы",
-    "description":"Классы. Отступы. Границы. Цвета. Стилизация текста",
+    "description": "Классы. Отступы. Границы. Цвета. Стилизация текста",
     "topic": "css",
-    "image":"https://ideacdn.net/idea/ct/82/myassets/blogs/css-nedir-css3.jpg?revision=1581695062",
-    "link":"../pages/homeworks/CSS/homework_01/index.html",
+    "image": "https://ideacdn.net/idea/ct/82/myassets/blogs/css-nedir-css3.jpg?revision=1581695062",
+    "link": "../pages/homeworks/CSS/homework_01/index.html",
     "icon": "bx bxl-css3"
-},
-{
+  },
+  {
     "id": 6,
     "title": "Background. Border. Стилизация текста. Позиционирование",
-    "description":"Background. Border. Стилизация текста. Позиционирование",
+    "description": "Background. Border. Стилизация текста. Позиционирование",
     "topic": "css",
-    "image":"https://media2.dev.to/dynamic/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnvx7kjixf1tarz5pm6xd.jpg",
-    "link":"../pages/homeworks/CSS/homework_02/index.html",
+    "image": "https://media2.dev.to/dynamic/image/width=1600,height=900,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fnvx7kjixf1tarz5pm6xd.jpg",
+    "link": "../pages/homeworks/CSS/homework_02/index.html",
     "icon": "bx bxl-css3"
-},
-{
+  },
+  {
     "id": 7,
     "title": "Flexbox",
-    "description":"Display:flex. Flex-direction. Flex-wrap. Gap. Justify-content. Text-align",
+    "description": "Display:flex. Flex-direction. Flex-wrap. Gap. Justify-content. Text-align",
     "topic": "css",
-    "image":"https://i.ytimg.com/vi/wsTv9y931o8/maxresdefault.jpg",
-    "link":"../pages/homeworks/CSS/homework_03/index.html",
+    "image": "https://i.ytimg.com/vi/wsTv9y931o8/maxresdefault.jpg",
+    "link": "../pages/homeworks/CSS/homework_03/index.html",
     "icon": "bx bxl-css3"
-},
-{
+  },
+  {
     "id": 8,
     "title": "Grid",
-    "description":"/Display:grid",
+    "description": "/Display:grid",
     "topic": "css",
-    "image":"https://miro.medium.com/v2/resize:fit:2000/1*m2Q3kRG9yl5WyNIyoe15XA.png",
-    "link":"../pages/homeworks/CSS/homework_04/index.html",
+    "image": "https://miro.medium.com/v2/resize:fit:2000/1*m2Q3kRG9yl5WyNIyoe15XA.png",
+    "link": "../pages/homeworks/CSS/homework_04/index.html",
     "icon": "bx bxl-css3"
-},
-{
+  },
+  {
     "id": 9,
     "title": "Анимация. Медиазапросы",
-    "description":"Transition. Translate. Keyframe",
+    "description": "Transition. Translate. Keyframe",
     "topic": "css",
-    "image":"https://cdn-images-1.medium.com/max/954/1*_6MfwckxNfQTca9SiG8MdQ.png",
-    "link":"../pages/homeworks/CSS/homework_05/index.html",
+    "image": "https://cdn-images-1.medium.com/max/954/1*_6MfwckxNfQTca9SiG8MdQ.png",
+    "link": "../pages/homeworks/CSS/homework_05/index.html",
     "icon": "bx bxl-css3"
-},
-{
+  },
+  {
     "id": 10,
     "title": "Анимация. Медиазапросы с помощью grid сетки",
-    "description":"Transition. Translate. Keyframe",
+    "description": "Transition. Translate. Keyframe",
     "topic": "css",
-    "image":"https://i.ytimg.com/vi/qQfIjRjZpx0/maxresdefault.jpg",
-    "link":"../pages/homeworks/CSS/homework_05.grid/index.html",
+    "image": "https://i.ytimg.com/vi/qQfIjRjZpx0/maxresdefault.jpg",
+    "link": "../pages/homeworks/CSS/homework_05.grid/index.html",
     "icon": "bx bxl-css3"
-}
-]
+  }
