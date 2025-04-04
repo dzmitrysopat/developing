@@ -441,19 +441,20 @@ h3.hw-id,
 }
 
 [type="search"]{
+    color: #a1a1a1;
     height: 35px;
     max-width: 500px;
     padding: 5px 5px 5px 2.5rem;
     font-size: 15px;
     border-radius: 8px;
-    border: 1px solid #eee;
+    border: 2px solid #eee;
     background-color: #eee;
     background-image: url('../img/search_wht.svg');
     background-position-y: center;
     background-position-x: 0.5rem;
     background-repeat: no-repeat;
     background-color: inherit;
-    transition: all .1s;
+    transition: all .3s;
 }
 
 [type = search]:active,
@@ -465,6 +466,10 @@ h3.hw-id,
     background-repeat: no-repeat;
     background-color: inherit;
     outline: 2px solid #c2c2c2;
+}
+
+#search::placeholder{
+    color:#c2c2c2;
 }
 
 h3 > i,

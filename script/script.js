@@ -74,6 +74,40 @@ function showSearchFilter(){
   }
   }
 
+  let currentFilter = 'all'; // значение по умолчанию
+
+  // Фильтрация по кнопкам
+  document.querySelectorAll('.filter-btn').forEach(button => {
+  button.addEventListener('click', function () {
+  currentFilter = this.getAttribute('data-filter'); // 'html', 'css', 'all'
+  applyFilters(); // применим фильтрацию с учётом текущего поиска
+  });
+  });
+  
+  // Поиск
+  const searchInput = document.querySelector('#search');
+  searchInput.addEventListener('input', applyFilters);
+  
+  // Основная функция, объединяющая фильтр и поиск
+  function applyFilters() {
+  const query = searchInput.value.toLowerCase();
+  
+  document.querySelectorAll('.hw-block').forEach(block => {
+  const hwId = block.querySelector('.hw-id').textContent.toLowerCase();
+  const title = block.querySelector('h2').textContent.toLowerCase();
+  const description = block.querySelector('p').textContent.toLowerCase();
+  
+  const matchesFilter = currentFilter === 'all' || hwId === currentFilter;
+  const matchesSearch = title.includes(query) || description.includes(query);
+  
+  if (matchesFilter && matchesSearch) {
+  block.style.display = 'block';
+  } else {
+  block.style.display = 'none';
+  }
+  });
+  }
+
 const observer = new MutationObserver(() => {
 
   // console.log("MutationObserver сработал! Проверяю aside...");

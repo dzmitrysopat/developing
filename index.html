@@ -19,10 +19,10 @@
 
         <article class="topic">
             <section class="filter">
-                <button class="filter-btn" onclick="htmlFilter()"><i class='bx bxl-html5'></i>html</button>
-                <button class="filter-btn" onclick="cssFilter()"><i class='bx bxl-css3'></i>css</button>
-                <button class="filter-btn" onclick=""><i class='bx bxl-javascript'></i>js</button>
-                <button class="filter-btn" onclick="resetFilter()"><i class='bx bxs-grid-alt' ></i>all</button>
+                <button class="filter-btn" data-filter="html" onclick="htmlFilter()"><i class='bx bxl-html5'></i>html</button>
+                <button class="filter-btn" data-filter="css" onclick="cssFilter()"><i class='bx bxl-css3'></i>css</button>
+                <button class="filter-btn" data-filter="js" onclick=""><i class='bx bxl-javascript'></i>js</button>
+                <button class="filter-btn" data-filter="all" onclick="resetFilter()"><i class='bx bxs-grid-alt' ></i>all</button>
                 <div class="search-block">
                     <!-- <i class='bx bx-search' onclick="showSearchFilter()"></i> -->
                     <input type="search" name="search" id="search" class="" placeholder="Search...">
