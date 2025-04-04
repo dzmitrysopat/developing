@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" id="favicon">
+    <link rel="stylesheet" href="../style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../script/wrapper.js"></script>
+    <title>Frontend Developer Plan</title>
+
+</head>
+<body>
+    <div w3-include-html="../pages/wrapper/header.html" id="header"></div>
+    <main>
+    <div w3-include-html="../pages/wrapper/aside.html" id="aside"></div>
+    <article class="topic">
+        <h1>Добавить запись</h1>
+        <form action="" method="post">
+            <label for="idaentificator">id</label>
+            <input type="text" id="identificator">
+            <label for="title">title</label>
+            <input type="text" id="title">
+            <label for="description">description</label>
+            <input type="text" id="description">
+            <label for="topic">topic</label>
+            <select name="topic" id="topic">
+                <option value="choose" hidden>choose topic</option>
+                <option value="html">html</option>
+                <option value="css">css</option>
+                <option value="js">js</option>
+            </select>
+            <label for="image">image link</label>
+            <input type="url" name="image" id="image">
+            <label for="link">link</label>
+            <input type="url" name="link" id="link">
+            <label for="icon">topic icon</label>
+            <input type="text" readonly>
+            <button type="submit" class="filter-btn">Добавить</button>
+        </form>
+    </article>
+    <div w3-include-html="../pages/wrapper/progress.html" id="progressBar"></div>
+    </main>
+    <div w3-include-html="../pages/wrapper/footer.html" id="footer"></div>
+
+    <script>
+        // create a function to update the date and time
+        function updateDateTime() {
+        const date = new Date();
+    const options = {  weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'  };
+    const dayOfWeek = date.toLocaleString('ru-RU', options);
+
+document.querySelector('#datetime').textContent = dayOfWeek;
+
+const yearOption = { year: 'numeric'};
+const currentYear = date.toLocaleString('ru-RU', yearOption);
+
+document.querySelector('#year').textContent = currentYear;
+}
+        setInterval(updateDateTime, 1000);
+    </script>
+    <script src="../script/script.js"></script>
+    <script>includeHTML();</script>
+    <script src="../script/theme.js"></script>
+    <script>
+        includeHTML(() => {
+            // Код для обновления данных
+            const progressContainer = document.getElementById("progress");
+            const bodyContainer = document.querySelector('.score');
+    
+            const htmlValue = localStorage.getItem('htmlValue');
+            const htmlProgress = localStorage.getItem('htmlProgress');
+            const questionNumber = localStorage.getItem('questionNumber');
+    
+            if (progressContainer) progressContainer.value = htmlValue || 0;
+            if (bodyContainer) bodyContainer.innerHTML = questionNumber || '0/0';
+        });
+
+        includeHTML(() => {
+        const themeScript = document.createElement("script");
+        themeScript.src = "../script/theme.js";
+        document.body.appendChild(themeScript);
+    });
+
+    includeHTML(() => {
+        // Проверяем, загружен ли aside с прогрессом
+        if (document.querySelector(".calendar")) {
+            // Загружаем скрипт GitHub Calendar, если он еще не загружен
+            const script = document.createElement("script");
+            script.src = "../script/github-calendar.js";
+            script.onload = () => {
+                GitHubCalendar(".calendar", "dzmitrysopat", {responsive: true, tooltips: false, global_stats: false});
+            };
+            document.body.appendChild(script);
+        }
+    });
+
+    includeHTML(() => {
+    setTimeout(() => {
+        const links = document.querySelectorAll(".aside-link");
+        const currentUrl = window.location.pathname;
+        
+        // Сначала убираем "active" у всех
+        links.forEach(link => link.classList.remove("active"));
+
+        links.forEach(link => {
+            if (!link.href || link.getAttribute("href") === "") {
+                console.log(`⏩ Пропускаем ссылку без href: ${link}`);
+                return; // Пропускаем ссылки без href
+            }
+
+            const linkPathname = new URL(link.href, window.location.origin).pathname;
+
+            console.log(`Ссылка: ${link.href}, Pathname: ${linkPathname}, Текущий URL: ${currentUrl}`);
+
+            if (linkPathname === currentUrl) {
+                console.log(`✅ Совпадение найдено: ${linkPathname}`);
+                link.classList.add("active");
+            }
+        });
+    }, 0); // Ждём загрузку aside
+});
+
+    </script>
+</body>
+</html>

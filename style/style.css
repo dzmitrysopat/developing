@@ -459,13 +459,13 @@ h3.hw-id,
 
 [type = search]:active,
 [type = search]:focus{
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
     background-image: url('../img/search.svg');
     background-position-y: center;
     background-position-x: 0.5rem;
     background-repeat: no-repeat;
     background-color: inherit;
-    outline: 2px solid #c2c2c2;
+    outline: none;
 }
 
 #search::placeholder{
@@ -632,4 +632,39 @@ footer{
 
 .none{
     display: none !important;
+}
+
+form{
+    /* gap: 10px; */
+    display: flex;
+    flex-direction: column;
+}
+
+form > input,
+form > select{
+    max-width: 50%;
+    height: 1.5rem;
+    border-radius: 8px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+form > select{
+    height: 2.2rem;
+    border: 2px solid #383838;
+    max-width: 53.5%;
+}
+
+form > label{
+    /* text-transform: uppercase; */
+    font-weight: 500;
+    text-decoration: 2px underline;
+}
+
+form > button {
+    font-size: 15px;
+    text-transform:none !important;
+    background-color: #0084ff !important;
 }
