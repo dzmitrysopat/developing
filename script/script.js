@@ -127,6 +127,10 @@ fetch('./script/html_list.json')
   form.reset();
 });
 
+const topic = document.getElementById("topic");
+console.log(topic.value);
+
+
 const observer = new MutationObserver(() => {
 
   // console.log("MutationObserver сработал! Проверяю aside...");
