@@ -40,7 +40,7 @@ fetch('./script/html_list.json')
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
 
-  const res = await fetch('/add', {
+  const res = await fetch('https://backend-dev-sngk.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
