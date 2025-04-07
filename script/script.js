@@ -1,4 +1,4 @@
-fetch('https://backend-dev-sngk.onrender.com/list')
+fetch('https://dzmitrysopat.github.io/script/html_list.json')
   .then(response => response.json())
   .then(data => {
     console.log(data); // всё работает!
