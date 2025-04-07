@@ -1,6 +1,8 @@
-fetch('./script/html_list.json')
-      .then(response => response.json())
-      .then(data => {
+fetch('https://backend-dev-sngk.onrender.com/list')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // всё работает!
+
         const container = document.querySelector('.topic-block');
 
         data.forEach(item =>{
